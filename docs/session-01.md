@@ -1,21 +1,39 @@
-## Quick Quiz (Session 2)
+## Selbsttest – WMS oder WFS?
 
-**1) What is WMS?**
-A. A service that returns vector features and attributes  
-B. A service that returns map images (rendered)  
-C. A file format like SHP  
+**Welche Aussagen zu WMS sind korrekt?**
+
+<form>
+<input type="checkbox"> A) WMS liefert Vektor-Geometrien mit Attributen<br>
+<input type="checkbox"> B) WMS liefert gerenderte Kartenbilder<br>
+<input type="checkbox"> C) WMS erlaubt keine direkte Attributabfrage<br>
+<input type="checkbox"> D) WMS ist ein Dateiformat wie SHP<br>
+</form>
 
 <details>
-<summary>Answer</summary>
+<summary>Antwort anzeigen</summary>
 
-✅ **B** — WMS returns rendered **images** of maps. You can view them, but you don’t get feature geometry/attributes.
+✅ **Richtig sind B und C**
+
+- WMS liefert nur gerenderte Bilder.
+- Man erhält keine Geometrien oder Attributdaten.
+- Es ist kein Dateiformat, sondern ein Webdienst.
 
 </details>
 
 
-<details>
-<summary>Show explanation</summary>
+### Frage 2
 
-✅ Correct: WFS gives you features + attributes that you can query.
+Welche Datenart ist ein Raster?
 
-</details>
+<form>
+<input type="checkbox"> A) Shapefile<br>
+<input type="checkbox"> B) GeoPackage<br>
+<input type="checkbox"> C) GeoTIFF<br>
+<input type="checkbox"> D) CSV<br>
+</form>
+
+??? info "Lösung anzeigen"
+
+    ✅ Richtig: **C) GeoTIFF**
+
+    Rasterdaten bestehen aus Pixeln mit festen Zellwerten.

@@ -1,7 +1,10 @@
 site_name: QGIS Basics – Internal Training
 theme:
   name: material
-
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
 nav:
   - Home: index.md
   - Sessions:
