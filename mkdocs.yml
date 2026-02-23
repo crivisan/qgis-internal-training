@@ -1,0 +1,13 @@
+site_name: QGIS Basics – Internal Training
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - Sessions:
+      - Session 1 – Basics: session-01.md
+      - Session 2 – WMS/WFS + Data: session-02.md
+      - Session 3 – Digitizing + Georeferencing: session-03.md
+      - Session 4 – Analysis + Layout: session-04.md
+  - Homework: homework.md
+  - Resources: resources.md
