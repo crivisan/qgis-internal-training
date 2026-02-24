@@ -17,6 +17,7 @@ graph TD
 Weder Fernerkundung, noch CAD, noch Datenbanken für sich allein sind ein GIS. 
 Erst die **Integration aller drei Komponenten** macht ein Geographisches Informationssystem aus.
 
+
 ```mermaid
 %%{init: {'theme': 'forest'}}%%
 mindmap
@@ -34,27 +35,42 @@ mindmap
       Attributverwaltung
       Abfrageverarbeitung
 ```
+
+
 ---
 
 ## Räumliche Fragestellungen
 
 GIS beantwortet Fragen wie:
 
-- Wo befindet sich etwas?
-- Was liegt in der Nähe?
-- Wie verändern sich räumliche Strukturen?
-- Welche Flächen sind betroffen?
+| Frage | Beispiel |
+|-------|----------|
+| **Wo** befindet sich etwas? | Standort von Schulen, Krankenhäusern |
+| **Was** liegt in der Nähe? | Supermärkte im Umkreis von 1 km |
+| **Wie** verändern sich Strukturen? | Stadtwachstum über 10 Jahre |
+| **Welche** Flächen sind betroffen? | Überschwemmungsgebiete |
 
 ---
-
 ## Typische Anwendungsbereiche
 
-| Bereich | Beispiel |
-|----------|----------|
-| Verwaltung | Flächennutzung |
-| Umwelt | Hochwasseranalyse |
-| Stadtplanung | Infrastruktur |
-| Verkehr | Netzwerkanalyse |
+```mermaid
+%%{init: {'theme': 'forest'}}%%
+graph LR
+    subgraph Verwaltung
+        A[Flächennutzung]
+    end
+    subgraph Umwelt
+        B[Hochwasseranalyse]
+    end
+    subgraph Stadtplanung
+        C[Infrastruktur]
+    end
+    subgraph Verkehr
+        D[Netzwerkanalyse]
+    end
+    
+    A & B & C & D --> E[GIS-Plattform]
+```
 
 ---
 
@@ -66,9 +82,3 @@ Ein GIS besteht aus:
 - 💻 Software
 - 👤 Anwendern
 - 🧠 Analytischen Methoden
-
----
-
-## Reflexionsfrage
-
-Welche räumlichen Fragestellungen gibt es in Ihrem Arbeitsbereich?
