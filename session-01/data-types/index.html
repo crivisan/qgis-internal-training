@@ -5,25 +5,25 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href=".." rel="prev"/>
-<link href="what-is-gis/" rel="next"/>
-<link href="../assets/images/favicon.png" rel="icon"/>
+<link href="../what-is-gis/" rel="prev"/>
+<link href="../coordinate-systems/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.2" name="generator"/>
-<title>Überblick - QGIS Grundlagenkurs – Interne Schulung</title>
-<link href="../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
-<link href="../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<title>Datentypen (Raster/Vektor) - QGIS Grundlagenkurs – Interne Schulung</title>
+<link href="../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<link href="../stylesheets/extra.css" rel="stylesheet"/>
-<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
 <body data-md-color-accent="orange" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#sitzung-1-grundlagen">
+<a class="md-skip" href="#datentypen-raster-vs-vektor">
           Skip to content
         </a>
 </div>
@@ -31,7 +31,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="QGIS Grundlagenkurs – Interne Schulung" class="md-header__button md-logo" data-md-component="logo" href=".." title="QGIS Grundlagenkurs – Interne Schulung">
+<a aria-label="QGIS Grundlagenkurs – Interne Schulung" class="md-header__button md-logo" data-md-component="logo" href="../.." title="QGIS Grundlagenkurs – Interne Schulung">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -47,7 +47,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Überblick
+              Datentypen (Raster/Vektor)
             
           </span>
 </div>
@@ -93,14 +93,14 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="QGIS Grundlagenkurs – Interne Schulung" class="md-nav__button md-logo" data-md-component="logo" href=".." title="QGIS Grundlagenkurs – Interne Schulung">
+<a aria-label="QGIS Grundlagenkurs – Interne Schulung" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="QGIS Grundlagenkurs – Interne Schulung">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 </a>
     QGIS Grundlagenkurs – Interne Schulung
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="..">
+<a class="md-nav__link" href="../..">
 <span class="md-ellipsis">
     
   
@@ -134,13 +134,37 @@
 
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    
+  
+    Überblick
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../what-is-gis/">
+<span class="md-ellipsis">
+    
+  
+    Was ist GIS?
+  
+
+    
+  </span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
     
   
-    Überblick
+    Datentypen (Raster/Vektor)
   
 
     
@@ -151,7 +175,7 @@
 <span class="md-ellipsis">
     
   
-    Überblick
+    Datentypen (Raster/Vektor)
   
 
     
@@ -164,38 +188,20 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#lernziele">
+<a class="md-nav__link" href="#vektordaten">
 <span class="md-ellipsis">
       
-        Lernziele
+        🟢 Vektordaten
       
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#uberblick-der-sitzung">
-<span class="md-ellipsis">
-      
-        Überblick der Sitzung
-      
-    </span>
-</a>
-<nav aria-label="Überblick der Sitzung" class="md-nav">
+<nav aria-label="🟢 Vektordaten" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#theorie">
+<a class="md-nav__link" href="#eigenschaften">
 <span class="md-ellipsis">
       
-        Theorie
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#praxis">
-<span class="md-ellipsis">
-      
-        Praxis
+        Eigenschaften
       
     </span>
 </a>
@@ -204,28 +210,20 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#inhalte-im-detail">
+<a class="md-nav__link" href="#rasterdaten">
 <span class="md-ellipsis">
       
-        Inhalte im Detail
+        🟡 Rasterdaten
       
     </span>
 </a>
-</li>
+<nav aria-label="🟡 Rasterdaten" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ablauf-der-sitzung">
+<a class="md-nav__link" href="#eigenschaften_1">
 <span class="md-ellipsis">
       
-        Ablauf der Sitzung
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#vorbereitung">
-<span class="md-ellipsis">
-      
-        Vorbereitung
+        Eigenschaften
       
     </span>
 </a>
@@ -234,31 +232,37 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="what-is-gis/">
+<a class="md-nav__link" href="#vergleich">
 <span class="md-ellipsis">
-    
-  
-    Was ist GIS?
-  
-
-    
-  </span>
+      
+        Vergleich
+      
+    </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="data-types/">
+<a class="md-nav__link" href="#typische-formate">
 <span class="md-ellipsis">
-    
-  
-    Datentypen (Raster/Vektor)
-  
-
-    
-  </span>
+      
+        Typische Formate
+      
+    </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="coordinate-systems/">
+<a class="md-nav__link" href="#mini-quiz">
+<span class="md-ellipsis">
+      
+        Mini-Quiz
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../coordinate-systems/">
 <span class="md-ellipsis">
     
   
@@ -270,7 +274,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="qgis-overview/">
+<a class="md-nav__link" href="../qgis-overview/">
 <span class="md-ellipsis">
     
   
@@ -282,7 +286,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="self-learning/">
+<a class="md-nav__link" href="../self-learning/">
 <span class="md-ellipsis">
     
   
@@ -294,7 +298,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="resources/">
+<a class="md-nav__link" href="../resources/">
 <span class="md-ellipsis">
     
   
@@ -332,7 +336,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../session-02/">
+<a class="md-nav__link" href="../../session-02/">
 <span class="md-ellipsis">
     
   
@@ -344,7 +348,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../session-02/self-learning/">
+<a class="md-nav__link" href="../../session-02/self-learning/">
 <span class="md-ellipsis">
     
   
@@ -356,7 +360,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../session-02/resources/">
+<a class="md-nav__link" href="../../session-02/resources/">
 <span class="md-ellipsis">
     
   
@@ -394,7 +398,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../session-03/">
+<a class="md-nav__link" href="../../session-03/">
 <span class="md-ellipsis">
     
   
@@ -406,7 +410,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../session-03/self-learning/">
+<a class="md-nav__link" href="../../session-03/self-learning/">
 <span class="md-ellipsis">
     
   
@@ -418,7 +422,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../session-03/resources/">
+<a class="md-nav__link" href="../../session-03/resources/">
 <span class="md-ellipsis">
     
   
@@ -456,7 +460,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../session-04/">
+<a class="md-nav__link" href="../../session-04/">
 <span class="md-ellipsis">
     
   
@@ -468,7 +472,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../session-04/self-learning/">
+<a class="md-nav__link" href="../../session-04/self-learning/">
 <span class="md-ellipsis">
     
   
@@ -480,7 +484,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../session-04/resources/">
+<a class="md-nav__link" href="../../session-04/resources/">
 <span class="md-ellipsis">
     
   
@@ -509,38 +513,20 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#lernziele">
+<a class="md-nav__link" href="#vektordaten">
 <span class="md-ellipsis">
       
-        Lernziele
+        🟢 Vektordaten
       
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#uberblick-der-sitzung">
-<span class="md-ellipsis">
-      
-        Überblick der Sitzung
-      
-    </span>
-</a>
-<nav aria-label="Überblick der Sitzung" class="md-nav">
+<nav aria-label="🟢 Vektordaten" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#theorie">
+<a class="md-nav__link" href="#eigenschaften">
 <span class="md-ellipsis">
       
-        Theorie
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#praxis">
-<span class="md-ellipsis">
-      
-        Praxis
+        Eigenschaften
       
     </span>
 </a>
@@ -549,28 +535,50 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#inhalte-im-detail">
+<a class="md-nav__link" href="#rasterdaten">
 <span class="md-ellipsis">
       
-        Inhalte im Detail
+        🟡 Rasterdaten
+      
+    </span>
+</a>
+<nav aria-label="🟡 Rasterdaten" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#eigenschaften_1">
+<span class="md-ellipsis">
+      
+        Eigenschaften
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vergleich">
+<span class="md-ellipsis">
+      
+        Vergleich
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ablauf-der-sitzung">
+<a class="md-nav__link" href="#typische-formate">
 <span class="md-ellipsis">
       
-        Ablauf der Sitzung
+        Typische Formate
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#vorbereitung">
+<a class="md-nav__link" href="#mini-quiz">
 <span class="md-ellipsis">
       
-        Vorbereitung
+        Mini-Quiz
       
     </span>
 </a>
@@ -582,97 +590,109 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="sitzung-1-grundlagen">Sitzung 1 – Grundlagen</h1>
+<h1 id="datentypen-raster-vs-vektor">Datentypen – Raster vs. Vektor</h1>
 <hr/>
-<h2 id="lernziele">Lernziele</h2>
-<div class="admonition success">
-<p class="admonition-title">Nach dieser Sitzung können Sie:</p>
+<h2 id="vektordaten">🟢 Vektordaten</h2>
+<p>Vektordaten bestehen aus:</p>
 <ul>
-<li>den Begriff <strong>GIS</strong> erklären  </li>
-<li>Raster- und Vektordaten unterscheiden  </li>
-<li>grundlegende Datenformate benennen  </li>
-<li>Koordinatenreferenzsysteme (CRS) verstehen  </li>
-<li>ein neues QGIS-Projekt anlegen  </li>
-<li>Hintergrundkarten einbinden  </li>
+<li>Punkten</li>
+<li>Linien</li>
+<li>Polygonen</li>
 </ul>
-</div>
-<hr/>
-<h2 id="uberblick-der-sitzung">Überblick der Sitzung</h2>
-<div class="grid cards">
+<h3 id="eigenschaften">Eigenschaften</h3>
 <ul>
-<li>
-<h3 id="theorie">Theorie</h3>
+<li>Klare Grenzen</li>
+<li>Attributtabelle vorhanden</li>
+<li>Präzise Geometrie</li>
+</ul>
+<p>📸 <em>Screenshot Punkt/Linie/Polygon einfügen</em></p>
 <hr/>
+<h2 id="rasterdaten">🟡 Rasterdaten</h2>
+<p>Raster bestehen aus Pixeln (Zellen mit Werten).</p>
+<h3 id="eigenschaften_1">Eigenschaften</h3>
 <ul>
-<li>Was ist GIS?  </li>
-<li>Datentypen (Raster &amp; Vektor)  </li>
-<li>Koordinatensysteme (CRS)</li>
+<li>Kontinuierliche Daten</li>
+<li>Jede Zelle enthält einen Wert</li>
+<li>Ideal für Luftbilder oder Höhenmodelle</li>
 </ul>
-</li>
-<li>
-<h3 id="praxis">Praxis</h3>
+<p>📸 <em>Screenshot Rasterstruktur einfügen</em></p>
 <hr/>
-<ul>
-<li>QGIS Oberfläche kennenlernen  </li>
-<li>Projekt anlegen  </li>
-<li>Hintergrundkarte einbinden  </li>
-</ul>
-</li>
-</ul>
-</div>
-<hr/>
-<h2 id="inhalte-im-detail">Inhalte im Detail</h2>
+<h2 id="vergleich">Vergleich</h2>
 <table>
 <thead>
 <tr>
-<th>Thema</th>
-<th>Schwerpunkt</th>
-<th>Ziel</th>
+<th>Merkmal</th>
+<th>Vektor</th>
+<th>Raster</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Was ist GIS?</td>
-<td>Grundbegriffe &amp; Einsatzgebiete</td>
-<td>Verständnis entwickeln</td>
+<td>Struktur</td>
+<td>Geometrien</td>
+<td>Pixel</td>
 </tr>
 <tr>
-<td>Datentypen</td>
-<td>Raster vs. Vektor</td>
-<td>Unterschiede erkennen</td>
+<td>Attribute</td>
+<td>Tabelle</td>
+<td>Zellwerte</td>
 </tr>
 <tr>
-<td>Koordinatensysteme</td>
-<td>Projektionen &amp; EPSG-Codes</td>
-<td>CRS richtig interpretieren</td>
-</tr>
-<tr>
-<td>QGIS Überblick</td>
-<td>Oberfläche &amp; Navigation</td>
-<td>Sicherer Einstieg</td>
+<td>Beispiel</td>
+<td>Grundstücke</td>
+<td>Luftbild</td>
 </tr>
 </tbody>
 </table>
 <hr/>
-<h2 id="ablauf-der-sitzung">Ablauf der Sitzung</h2>
-<ol>
-<li>Einführung &amp; Motivation  </li>
-<li>Theoretische Grundlagen  </li>
-<li>Praktische Demonstration in QGIS  </li>
-<li>Selbsttest  </li>
-<li>Hausaufgabe  </li>
-</ol>
+<h2 id="typische-formate">Typische Formate</h2>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Typ</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SHP</td>
+<td>Vektor</td>
+<td>Klassisches Format</td>
+</tr>
+<tr>
+<td>GeoPackage</td>
+<td>Vektor</td>
+<td>Modernes Containerformat</td>
+</tr>
+<tr>
+<td>CSV</td>
+<td>Tabelle</td>
+<td>Kann zu Punkten werden</td>
+</tr>
+<tr>
+<td>TIFF</td>
+<td>Raster</td>
+<td>Bildformat</td>
+</tr>
+<tr>
+<td>GeoTIFF</td>
+<td>Raster</td>
+<td>Mit Georeferenz</td>
+</tr>
+</tbody>
+</table>
 <hr/>
-<h2 id="vorbereitung">Vorbereitung</h2>
-<div class="admonition info">
-<p class="admonition-title">Bitte vorbereiten</p>
-<ul>
-<li>QGIS (LTR-Version) installiert  </li>
-<li>Maus mit Scrollrad empfohlen  </li>
-<li>Zweiter Bildschirm optional  </li>
-</ul>
-</div>
-<hr/>
+<h2 id="mini-quiz">Mini-Quiz</h2>
+<form>
+<input type="checkbox"/> A) Ein Luftbild ist ein Vektorlayer<br/>
+<input type="checkbox"/> B) Ein Shapefile enthält eine Attributtabelle<br/>
+<input type="checkbox"/> C) Raster bestehen aus Pixeln<br/>
+</form>
+<details class="info">
+<summary>Lösung anzeigen</summary>
+<p>✅ Richtig sind B und C</p>
+</details>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
@@ -696,8 +716,8 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
-<script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+<script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
 <script src="https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js"></script>
 <script src="https://unpkg.com/@mermaid-js/mermaid-mindmap@10.9.1/dist/mermaid-mindmap.min.js"></script>
 </body>
