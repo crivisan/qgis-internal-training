@@ -1,16 +1,59 @@
-site_name: QGIS Basics – Internal Training
+site_name: QGIS Grundlagenkurs – Interne Schulung
 theme:
   name: material
+  palette:
+    primary: indigo
+    accent: orange
+
+plugins:
+    - search
+    - mermaid2
+
 markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.highlight
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences:
+        custom_fences:
+            - name: mermaid
+              class: mermaid
+              format: !!python/name:pymdownx.superfences.fence_code_format
+
+# WICHTIG: Manuelles Einbinden der Mermaid-Module
+
+extra_javascript:
+  - https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js
+  - https://unpkg.com/@mermaid-js/mermaid-mindmap@10.9.1/dist/mermaid-mindmap.min.js
+
+extra_css:
+  - stylesheets/extra.css 
+
 nav:
-  - Home: index.md
-  - Sessions:
-      - Session 1 – Basics: session-01.md
-      - Session 2 – WMS/WFS + Data: session-02.md
-      - Session 3 – Digitizing + Georeferencing: session-03.md
-      - Session 4 – Analysis + Layout: session-04.md
-  - Homework: homework.md
-  - Resources: resources.md
+  - Start: index.md
+  - Sitzung 1 – Grundlagen:
+      - Überblick: session-01/index.md
+      - Was ist GIS?: session-01/what-is-gis.md
+      - Datentypen (Raster/Vektor): session-01/data-types.md
+      - Koordinatensysteme (CRS): session-01/coordinate-systems.md
+      - QGIS Oberfläche: session-01/qgis-overview.md
+      - Selbsttest: session-01/self-learning.md
+      - Ressourcen: session-01/resources.md
+
+  - Sitzung 2 – Externe Dienste:
+      - Überblick: session-02/index.md
+      - Selbsttest: session-02/self-learning.md
+      - Ressourcen: session-02/resources.md
+
+  - Sitzung 3 – Digitalisieren:
+      - Überblick: session-03/index.md
+      - Selbsttest: session-03/self-learning.md
+      - Ressourcen: session-03/resources.md
+
+  - Sitzung 4 – Einfache Analysen & Drucklayouts:
+      - Überblick: session-04/index.md
+      - Selbsttest: session-04/self-learning.md
+      - Ressourcen: session-04/resources.md
