@@ -185,15 +185,6 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#init-theme-forest-mindmap-rootgeographischebrinformationssysteme-fernerkundung-satellitenbilder-luftbildfotografie-drohnendaten-cad-ingenieursentwurf-stadtplanung-3d-modellierung-datenbanken-speicherung-raumlicher-daten-attributverwaltung-abfrageverarbeitung">
-<span class="md-ellipsis">
-      
-        %%{init: {'theme': 'forest'}}%% mindmap root((Geographische&lt;br&gt;Informationssysteme)) Fernerkundung Satellitenbilder Luftbildfotografie Drohnendaten CAD Ingenieursentwurf Stadtplanung 3D-Modellierung Datenbanken Speicherung räumlicher Daten Attributverwaltung Abfrageverarbeitung
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#raumliche-fragestellungen">
 <span class="md-ellipsis">
       
@@ -216,15 +207,6 @@
 <span class="md-ellipsis">
       
         Bestandteile eines GIS
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#reflexionsfrage">
-<span class="md-ellipsis">
-      
-        Reflexionsfrage
       
     </span>
 </a>
@@ -505,15 +487,6 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#init-theme-forest-mindmap-rootgeographischebrinformationssysteme-fernerkundung-satellitenbilder-luftbildfotografie-drohnendaten-cad-ingenieursentwurf-stadtplanung-3d-modellierung-datenbanken-speicherung-raumlicher-daten-attributverwaltung-abfrageverarbeitung">
-<span class="md-ellipsis">
-      
-        %%{init: {'theme': 'forest'}}%% mindmap root((Geographische&lt;br&gt;Informationssysteme)) Fernerkundung Satellitenbilder Luftbildfotografie Drohnendaten CAD Ingenieursentwurf Stadtplanung 3D-Modellierung Datenbanken Speicherung räumlicher Daten Attributverwaltung Abfrageverarbeitung
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#raumliche-fragestellungen">
 <span class="md-ellipsis">
       
@@ -540,15 +513,6 @@
     </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#reflexionsfrage">
-<span class="md-ellipsis">
-      
-        Reflexionsfrage
-      
-    </span>
-</a>
-</li>
 </ul>
 </nav>
 </div>
@@ -567,7 +531,7 @@
     A --&gt; E[Visualisierung&lt;br&gt;räumlicher Daten]</code></pre>
 <p>Weder Fernerkundung, noch CAD, noch Datenbanken für sich allein sind ein GIS. 
 Erst die <strong>Integration aller drei Komponenten</strong> macht ein Geographisches Informationssystem aus.</p>
-<h2 id="init-theme-forest-mindmap-rootgeographischebrinformationssysteme-fernerkundung-satellitenbilder-luftbildfotografie-drohnendaten-cad-ingenieursentwurf-stadtplanung-3d-modellierung-datenbanken-speicherung-raumlicher-daten-attributverwaltung-abfrageverarbeitung"><pre class="mermaid"><code>%%{init: {'theme': 'forest'}}%%
+<pre class="mermaid"><code>%%{init: {'theme': 'forest'}}%%
 mindmap
   root((Geographische&lt;br&gt;Informationssysteme))
     Fernerkundung
@@ -581,43 +545,54 @@ mindmap
     Datenbanken
       Speicherung räumlicher Daten
       Attributverwaltung
-      Abfrageverarbeitung</code></pre></h2>
+      Abfrageverarbeitung</code></pre>
+<hr/>
 <h2 id="raumliche-fragestellungen">Räumliche Fragestellungen</h2>
 <p>GIS beantwortet Fragen wie:</p>
-<ul>
-<li>Wo befindet sich etwas?</li>
-<li>Was liegt in der Nähe?</li>
-<li>Wie verändern sich räumliche Strukturen?</li>
-<li>Welche Flächen sind betroffen?</li>
-</ul>
-<hr/>
-<h2 id="typische-anwendungsbereiche">Typische Anwendungsbereiche</h2>
 <table>
 <thead>
 <tr>
-<th>Bereich</th>
+<th>Frage</th>
 <th>Beispiel</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Verwaltung</td>
-<td>Flächennutzung</td>
+<td><strong>Wo</strong> befindet sich etwas?</td>
+<td>Standort von Schulen, Krankenhäusern</td>
 </tr>
 <tr>
-<td>Umwelt</td>
-<td>Hochwasseranalyse</td>
+<td><strong>Was</strong> liegt in der Nähe?</td>
+<td>Supermärkte im Umkreis von 1 km</td>
 </tr>
 <tr>
-<td>Stadtplanung</td>
-<td>Infrastruktur</td>
+<td><strong>Wie</strong> verändern sich Strukturen?</td>
+<td>Stadtwachstum über 10 Jahre</td>
 </tr>
 <tr>
-<td>Verkehr</td>
-<td>Netzwerkanalyse</td>
+<td><strong>Welche</strong> Flächen sind betroffen?</td>
+<td>Überschwemmungsgebiete</td>
 </tr>
 </tbody>
 </table>
+<hr/>
+<h2 id="typische-anwendungsbereiche">Typische Anwendungsbereiche</h2>
+<pre class="mermaid"><code>%%{init: {'theme': 'forest'}}%%
+graph LR
+    subgraph Verwaltung
+        A[Flächennutzung]
+    end
+    subgraph Umwelt
+        B[Hochwasseranalyse]
+    end
+    subgraph Stadtplanung
+        C[Infrastruktur]
+    end
+    subgraph Verkehr
+        D[Netzwerkanalyse]
+    end
+
+    A &amp; B &amp; C &amp; D --&gt; E[GIS-Plattform]</code></pre>
 <hr/>
 <h2 id="bestandteile-eines-gis">Bestandteile eines GIS</h2>
 <p>Ein GIS besteht aus:</p>
@@ -627,9 +602,6 @@ mindmap
 <li>👤 Anwendern</li>
 <li>🧠 Analytischen Methoden</li>
 </ul>
-<hr/>
-<h2 id="reflexionsfrage">Reflexionsfrage</h2>
-<p>Welche räumlichen Fragestellungen gibt es in Ihrem Arbeitsbereich?</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

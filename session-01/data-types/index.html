@@ -191,51 +191,25 @@
 <a class="md-nav__link" href="#vektordaten">
 <span class="md-ellipsis">
       
-        🟢 Vektordaten
+        Vektordaten
       
     </span>
 </a>
-<nav aria-label="🟢 Vektordaten" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#eigenschaften">
-<span class="md-ellipsis">
-      
-        Eigenschaften
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#rasterdaten">
 <span class="md-ellipsis">
       
-        🟡 Rasterdaten
-      
-    </span>
-</a>
-<nav aria-label="🟡 Rasterdaten" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#eigenschaften_1">
-<span class="md-ellipsis">
-      
-        Eigenschaften
+        Rasterdaten
       
     </span>
 </a>
 </li>
-</ul>
-</nav>
-</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#vergleich">
+<a class="md-nav__link" href="#vektor-vs-raster">
 <span class="md-ellipsis">
       
-        Vergleich
+        Vektor vs. Raster
       
     </span>
 </a>
@@ -245,15 +219,6 @@
 <span class="md-ellipsis">
       
         Typische Formate
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#mini-quiz">
-<span class="md-ellipsis">
-      
-        Mini-Quiz
       
     </span>
 </a>
@@ -516,51 +481,25 @@
 <a class="md-nav__link" href="#vektordaten">
 <span class="md-ellipsis">
       
-        🟢 Vektordaten
+        Vektordaten
       
     </span>
 </a>
-<nav aria-label="🟢 Vektordaten" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#eigenschaften">
-<span class="md-ellipsis">
-      
-        Eigenschaften
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#rasterdaten">
 <span class="md-ellipsis">
       
-        🟡 Rasterdaten
-      
-    </span>
-</a>
-<nav aria-label="🟡 Rasterdaten" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#eigenschaften_1">
-<span class="md-ellipsis">
-      
-        Eigenschaften
+        Rasterdaten
       
     </span>
 </a>
 </li>
-</ul>
-</nav>
-</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#vergleich">
+<a class="md-nav__link" href="#vektor-vs-raster">
 <span class="md-ellipsis">
       
-        Vergleich
+        Vektor vs. Raster
       
     </span>
 </a>
@@ -574,15 +513,6 @@
     </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#mini-quiz">
-<span class="md-ellipsis">
-      
-        Mini-Quiz
-      
-    </span>
-</a>
-</li>
 </ul>
 </nav>
 </div>
@@ -591,108 +521,113 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="datentypen-raster-vs-vektor">Datentypen – Raster vs. Vektor</h1>
+<h2 id="vektordaten">Vektordaten</h2>
+<pre class="mermaid"><code>graph TD
+    V[VEKTORDATEN] --&gt; P[Punkte]
+    V --&gt; L[Linien]
+    V --&gt; POL[Polygone]
+
+    P --&gt; P1["📍 Einzelne Koordinaten"]
+    P --&gt; P2["z.B. Brunnen, Messstationen"]
+
+    L --&gt; L1["📏 Verbundene Punkte"]
+    L --&gt; L2["z.B. Straßen, Flüsse"]
+
+    POL --&gt; POL1["🔲 Geschlossene Flächen"]
+    POL --&gt; POL2["z.B. Grundstücke, Seen"]
+
+    style V fill:#90EE90,stroke:#333,stroke-width:2px
+    style P fill:#e1f5e1,stroke:#333
+    style L fill:#e1f5e1,stroke:#333
+    style POL fill:#e1f5e1,stroke:#333</code></pre>
+<p>Eigenschaften:</p>
+<p><strong>Klare Grenzen</strong> – Objekte sind exakt definiert<br/>
+<strong>Attributtabelle</strong> – Jedes Objekt hat Sachdaten<br/>
+<strong>Präzise Geometrie</strong> – Hohe Genauigkeit<br/>
+<strong>Geringe Dateigröße</strong> – Speichereffizient</p>
 <hr/>
-<h2 id="vektordaten">🟢 Vektordaten</h2>
-<p>Vektordaten bestehen aus:</p>
-<ul>
-<li>Punkten</li>
-<li>Linien</li>
-<li>Polygonen</li>
-</ul>
-<h3 id="eigenschaften">Eigenschaften</h3>
-<ul>
-<li>Klare Grenzen</li>
-<li>Attributtabelle vorhanden</li>
-<li>Präzise Geometrie</li>
-</ul>
-<p>📸 <em>Screenshot Punkt/Linie/Polygon einfügen</em></p>
+<h2 id="rasterdaten">Rasterdaten</h2>
+<pre class="mermaid"><code>graph TD
+    R[RASTERDATEN] --&gt; Z[Zellenwert]
+    R --&gt; A[Auflösung]
+    R --&gt; B[Bänder]
+
+    Z --&gt; Z1["Jede Zelle = ein Wert"]
+    Z --&gt; Z2["z.B. Höhe, Temperatur, Farbe"]
+
+    A --&gt; A1["Zellengröße = Detailgrad"]
+    A --&gt; A2["z.B. 10m, 30m, 1km pro Pixel"]
+
+    B --&gt; B1["Mehrere Werte pro Zelle"]
+    B --&gt; B2["z.B. RGB = Rot, Grün, Blau"]
+
+    subgraph Pixelstruktur
+        P1[■] --- P2[■] --- P3[■]
+        P4[■] --- P5[■] --- P6[■]
+        P7[■] --- P8[■] --- P9[■]
+    end
+
+    style R fill:#FFD700,stroke:#333,stroke-width:2px
+    style Z fill:#fff3bf,stroke:#333
+    style A fill:#fff3bf,stroke:#333
+    style B fill:#fff3bf,stroke:#333
+    style Pixelstruktur fill:#f8f9fa,stroke:#666,stroke-dasharray: 5 5</code></pre>
+<p>Eigenschaften:</p>
+<p><strong>Kontinuierliche Daten</strong> – Nahtlose Übergänge<br/>
+<strong>Ideal für</strong> – Luftbilder, Satellitenaufnahmen, Höhenmodelle<br/>
+<strong>Einfache Struktur</strong> – Matrix aus Zellen<br/>
+<strong>Algebra möglich</strong> – Rasterberechnungen (z.B. NDVI)</p>
 <hr/>
-<h2 id="rasterdaten">🟡 Rasterdaten</h2>
-<p>Raster bestehen aus Pixeln (Zellen mit Werten).</p>
-<h3 id="eigenschaften_1">Eigenschaften</h3>
-<ul>
-<li>Kontinuierliche Daten</li>
-<li>Jede Zelle enthält einen Wert</li>
-<li>Ideal für Luftbilder oder Höhenmodelle</li>
-</ul>
-<p>📸 <em>Screenshot Rasterstruktur einfügen</em></p>
-<hr/>
-<h2 id="vergleich">Vergleich</h2>
-<table>
-<thead>
-<tr>
-<th>Merkmal</th>
-<th>Vektor</th>
-<th>Raster</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Struktur</td>
-<td>Geometrien</td>
-<td>Pixel</td>
-</tr>
-<tr>
-<td>Attribute</td>
-<td>Tabelle</td>
-<td>Zellwerte</td>
-</tr>
-<tr>
-<td>Beispiel</td>
-<td>Grundstücke</td>
-<td>Luftbild</td>
-</tr>
-</tbody>
-</table>
+<h2 id="vektor-vs-raster">Vektor vs. Raster</h2>
+<pre class="mermaid"><code>quadrantChart
+    title Vektor vs. Raster - Anwendungsbereiche
+    x-axis "Diskrete Objekte" --&gt; "Kontinuierliche Phänomene"
+    y-axis "Hohe Präzision" --&gt; "Flächendeckend"
+    quadrant-1 "🏛️ Kataster (VEKTOR)"
+    quadrant-2 "🚦 Verkehrsnetze (VEKTOR)"
+    quadrant-3 "🌲 Höhenmodelle (RASTER)"
+    quadrant-4 "🛰️ Satellitenbilder (RASTER)"</code></pre>
+<p><img alt="Screenshot" src="../images/vector_vs_raster.png" width="500"/></p>
 <hr/>
 <h2 id="typische-formate">Typische Formate</h2>
-<table>
-<thead>
-<tr>
-<th>Format</th>
-<th>Typ</th>
-<th>Beschreibung</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>SHP</td>
-<td>Vektor</td>
-<td>Klassisches Format</td>
-</tr>
-<tr>
-<td>GeoPackage</td>
-<td>Vektor</td>
-<td>Modernes Containerformat</td>
-</tr>
-<tr>
-<td>CSV</td>
-<td>Tabelle</td>
-<td>Kann zu Punkten werden</td>
-</tr>
-<tr>
-<td>TIFF</td>
-<td>Raster</td>
-<td>Bildformat</td>
-</tr>
-<tr>
-<td>GeoTIFF</td>
-<td>Raster</td>
-<td>Mit Georeferenz</td>
-</tr>
-</tbody>
-</table>
-<hr/>
-<h2 id="mini-quiz">Mini-Quiz</h2>
-<form>
-<input type="checkbox"/> A) Ein Luftbild ist ein Vektorlayer<br/>
-<input type="checkbox"/> B) Ein Shapefile enthält eine Attributtabelle<br/>
-<input type="checkbox"/> C) Raster bestehen aus Pixeln<br/>
-</form>
-<details class="info">
-<summary>Lösung anzeigen</summary>
-<p>✅ Richtig sind B und C</p>
-</details>
+<pre class="mermaid"><code>graph TB
+    subgraph Vektorformate[Vektorformate]
+        direction TB
+        SHP[SHP] --&gt; SHP1["Klassisches Shapefile (ESRI)"]
+        GPKG[GeoPackage] --&gt; GPKG1["Modernes Containerformat (SQLite)"]
+
+        subgraph Weitere_Vektor[Weitere Vektorformate]
+            GEOJSON[GeoJSON] --&gt; GEOJSON1["Web-Standard (JSON)"]
+            GML[GML] --&gt; GML1["XML-basiert (OGC)"]
+            KML[KML] --&gt; KML1["Google Earth Format"]
+            DXF[DXF] --&gt; DXF1["CAD-Austauschformat"]
+        end
+    end
+
+    subgraph Rasterformate[Rasterformate]
+        direction TB
+        TIFF[TIFF] --&gt; TIFF1["Bildformat (Tagged Image)"]
+        GeoTIFF[GeoTIFF] --&gt; GeoTIFF1["Mit Georeferenz"]
+
+        subgraph Weitere_Raster[Weitere Rasterformate]
+            JPEG2000[JPEG2000] --&gt; JPEG20001["Komprimiert, verlustfrei möglich"]
+            ECW[ECW] --&gt; ECW1["Stark komprimiert (Datenvolumen)"]
+            MR[MrSID] --&gt; MR1["Multiresolution (große Dateien)"]
+            HFA[HFA] --&gt; HFA1["Erdas Imagine Format"]
+        end
+    end
+
+    Vektorformate ~~~ CSV
+    Rasterformate ~~~ CSV
+
+    CSV[📋 CSV] --&gt; CSV1["Tabellenformat (komma-separiert)"]
+    CSV1 --&gt; CSV2["Kann zu Punkten konvertiert werden"]
+
+    style Vektorformate fill:#e1f5e1,stroke:#333,stroke-width:2px
+    style Weitere_Vektor fill:#c8e6c9,stroke:#333,stroke-dasharray: 5 5
+    style Rasterformate fill:#fff3bf,stroke:#333,stroke-width:2px
+    style Weitere_Raster fill:#ffe082,stroke:#333,stroke-dasharray: 5 5
+    style CSV fill:#e1f5ff,stroke:#333,stroke-width:2px</code></pre>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
