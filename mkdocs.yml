@@ -15,6 +15,7 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed
   - pymdownx.highlight
+  - pymdownx.details
   - attr_list
   - md_in_html
   - pymdownx.superfences:
@@ -24,7 +25,6 @@ markdown_extensions:
               format: !!python/name:pymdownx.superfences.fence_code_format
 
 # WICHTIG: Manuelles Einbinden der Mermaid-Module
-
 extra_javascript:
   - https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js
   - https://unpkg.com/@mermaid-js/mermaid-mindmap@10.9.1/dist/mermaid-mindmap.min.js
@@ -38,7 +38,7 @@ nav:
       - Überblick: session-01/index.md
       - Was ist GIS?: session-01/what-is-gis.md
       - Datentypen (Raster/Vektor): session-01/data-types.md
-      - Koordinatensysteme (CRS): session-01/coordinate-systems.md
+      - Koordinatensysteme: session-01/coordinate-systems.md
       - QGIS Oberfläche: session-01/qgis-overview.md
       - Selbsttest: session-01/self-learning.md
       - Ressourcen: session-01/resources.md

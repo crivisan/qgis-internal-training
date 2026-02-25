@@ -52,7 +52,7 @@ Dieser Kurs richtet sich an Einsteigerinnen und Einsteiger, die bisher wenig ode
 <ul>
 <li>Was ist GIS?</li>
 <li>Raster- und Vektordaten</li>
-<li>Koordinatensysteme (CRS)</li>
+<li>Koordinatensysteme</li>
 <li>QGIS Oberfläche und erste Schritte</li>
 </ul>
 
