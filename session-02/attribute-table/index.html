@@ -5,9 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../loading-local-data/" rel="prev"/>
+<link href="../web-services-wms-wfs/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.2" name="generator"/>
-<title>QGIS – Oberfläche &amp; erste Schritte - QGIS Grundlagenkurs – Interne Schulung</title>
+<title>Attributtabellen und einfache Filter - QGIS Grundlagenkurs – Interne Schulung</title>
 <link href="../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -21,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#qgis-oberflache-erste-schritte">
+<a class="md-skip" href="#block-2-attributtabellen-kurze-demo">
           Skip to content
         </a>
 </div>
@@ -45,7 +47,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              QGIS – Oberfläche &amp; erste Schritte
+              Attributtabellen und einfache Filter
             
           </span>
 </div>
@@ -219,8 +221,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
 <span class="md-ellipsis">
     
@@ -232,7 +234,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
             
@@ -243,7 +245,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../session-02/">
+<a class="md-nav__link" href="../">
 <span class="md-ellipsis">
     
   
@@ -255,7 +257,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../session-02/loading-local-data/">
+<a class="md-nav__link" href="../loading-local-data/">
 <span class="md-ellipsis">
     
   
@@ -266,8 +268,20 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../session-02/attribute-table/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Attributtabellen und einfache Filter
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     
   
@@ -277,9 +291,62 @@
     
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#attributtabelle-offnen">
+<span class="md-ellipsis">
+      
+        Attributtabelle öffnen
+      
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../session-02/web-services-wms-wfs/">
+<a class="md-nav__link" href="#sortieren">
+<span class="md-ellipsis">
+      
+        Sortieren
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#filtern">
+<span class="md-ellipsis">
+      
+        Filtern
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#filter-zurucksetzen">
+<span class="md-ellipsis">
+      
+        Filter zurücksetzen
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#selektion">
+<span class="md-ellipsis">
+      
+        Selektion
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../web-services-wms-wfs/">
 <span class="md-ellipsis">
     
   
@@ -291,7 +358,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../session-02/self-learning/">
+<a class="md-nav__link" href="../self-learning/">
 <span class="md-ellipsis">
     
   
@@ -303,7 +370,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../session-02/resources/">
+<a class="md-nav__link" href="../resources/">
 <span class="md-ellipsis">
     
   
@@ -456,59 +523,46 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#hauptbereiche-der-oberflache">
+<a class="md-nav__link" href="#attributtabelle-offnen">
 <span class="md-ellipsis">
       
-        Hauptbereiche der Oberfläche
+        Attributtabelle öffnen
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#neues-projekt-erstellen">
+<a class="md-nav__link" href="#sortieren">
 <span class="md-ellipsis">
       
-        Neues Projekt erstellen
+        Sortieren
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#crs-im-projekt-einstellen">
+<a class="md-nav__link" href="#filtern">
 <span class="md-ellipsis">
       
-        CRS im Projekt einstellen
+        Filtern
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#openstreetmap-hinzufugen">
+<a class="md-nav__link" href="#filter-zurucksetzen">
 <span class="md-ellipsis">
       
-        OpenStreetMap hinzufügen
-      
-    </span>
-</a>
-<nav aria-label="OpenStreetMap hinzufügen" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#xyz-tiles">
-<span class="md-ellipsis">
-      
-        XYZ Tiles
+        Filter zurücksetzen
       
     </span>
 </a>
 </li>
-</ul>
-</nav>
-</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ubung">
+<a class="md-nav__link" href="#selektion">
 <span class="md-ellipsis">
       
-        Übung
+        Selektion
       
     </span>
 </a>
@@ -520,64 +574,36 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="qgis-oberflache-erste-schritte">QGIS – Oberfläche &amp; erste Schritte</h1>
-<hr/>
-<h2 id="hauptbereiche-der-oberflache">Hauptbereiche der Oberfläche</h2>
-<table>
-<thead>
-<tr>
-<th>Bereich</th>
-<th>Funktion</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Layer-Fenster</td>
-<td>Verwaltung der Layer</td>
-</tr>
-<tr>
-<td>Kartenfenster</td>
-<td>Darstellung</td>
-</tr>
-<tr>
-<td>Browser</td>
-<td>Datenquellen</td>
-</tr>
-<tr>
-<td>Werkzeugleisten</td>
-<td>Analyse &amp; Werkzeuge</td>
-</tr>
-</tbody>
-</table>
-<p><img alt="Screenshot" src="images/qgis_ui.png" width="500"/></p>
-<hr/>
-<h2 id="neues-projekt-erstellen">Neues Projekt erstellen</h2>
-<ol>
-<li>QGIS starten</li>
-<li>Neues Projekt anlegen</li>
-<li>Projekt speichern</li>
-</ol>
-<hr/>
-<h2 id="crs-im-projekt-einstellen">CRS im Projekt einstellen</h2>
-<ol>
-<li>Rechts unten auf CRS klicken</li>
-<li>EPSG-Code auswählen (z.B. 25832)</li>
-<li>Bestätigen</li>
-</ol>
-<hr/>
-<h2 id="openstreetmap-hinzufugen">OpenStreetMap hinzufügen</h2>
-<h3 id="xyz-tiles">XYZ Tiles</h3>
-<p>URL:
-https://tile.openstreetmap.org/{z}/{x}/{y}.png</p>
-<p>📸 <em>Screenshot XYZ Verbindung</em></p>
-<hr/>
-<h2 id="ubung">Übung</h2>
+<h1 id="block-2-attributtabellen-kurze-demo">Block 2 – Attributtabellen (kurze Demo)</h1>
+<h2 id="attributtabelle-offnen">Attributtabelle öffnen</h2>
 <ul>
-<li>Neues Projekt anlegen</li>
-<li>CRS einstellen</li>
-<li>OSM als Hintergrund hinzufügen</li>
-<li>Projekt speichern</li>
+<li>Rechtsklick auf einen Layer → <strong>Attributtabelle öffnen</strong></li>
 </ul>
+<p><img alt="Attributtabelle öffnen" src="../images/b2_1_open.png"/></p>
+<p>Die Tabelle zeigt alle Sachdaten (Attribute) der Geometrien.</p>
+<h2 id="sortieren">Sortieren</h2>
+<ul>
+<li>Klicken Sie auf eine Spaltenüberschrift, um aufsteigend zu sortieren.</li>
+<li>Nochmal klicken für absteigende Sortierung.</li>
+</ul>
+<h2 id="filtern">Filtern</h2>
+<ol>
+<li>Klicken Sie auf das <strong>Filter-Symbol</strong>.</li>
+<li>Geben Sie einen Ausdruck ein, z.B. <code>"name" = 'Rathaus'</code> (Textwerte in einfache Anführungszeichen).</li>
+<li>OK – die Tabelle zeigt nur noch die gefilterten Zeilen; auf der Karte werden die anderen Objekte ausgegraut.</li>
+</ol>
+<p><img alt="Filter anwenden" src="../images/b2_2a_filter.png"/>
+<img alt="Filter anwenden" src="../images/b2_2b_filter.png"/></p>
+<h2 id="filter-zurucksetzen">Filter zurücksetzen</h2>
+<ul>
+<li>Klicken Sie auf das <strong>Filter-Symbol</strong> und löschen Sie den Ausdruck, oder drücken Sie den <strong>Papierkorb</strong>-Button.</li>
+</ul>
+<h2 id="selektion">Selektion</h2>
+<ul>
+<li>Klicken Sie in der Tabelle auf eine Zeilennummer (links) – das Objekt wird auf der Karte gelb markiert.</li>
+<li>Oder klicken Sie auf der Karte ein Objekt an – die zugehörige Zeile in der Tabelle wird markiert.</li>
+</ul>
+<p><img alt="Selektion" src="../images/b2_3_select.png"/></p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

@@ -5,9 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../" rel="prev"/>
+<link href="../attribute-table/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.2" name="generator"/>
-<title>QGIS – Oberfläche &amp; erste Schritte - QGIS Grundlagenkurs – Interne Schulung</title>
+<title>Lokale Daten laden - QGIS Grundlagenkurs – Interne Schulung</title>
 <link href="../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -21,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#qgis-oberflache-erste-schritte">
+<a class="md-skip" href="#block-1-lokale-daten-laden">
           Skip to content
         </a>
 </div>
@@ -45,7 +47,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              QGIS – Oberfläche &amp; erste Schritte
+              Lokale Daten laden
             
           </span>
 </div>
@@ -219,8 +221,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
 <span class="md-ellipsis">
     
@@ -232,7 +234,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
             
@@ -243,7 +245,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../session-02/">
+<a class="md-nav__link" href="../">
 <span class="md-ellipsis">
     
   
@@ -254,8 +256,20 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../session-02/loading-local-data/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Lokale Daten laden
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     
   
@@ -265,9 +279,106 @@
     
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#theorie-lokale-geodaten-formate">
+<span class="md-ellipsis">
+      
+        Theorie: Lokale Geodaten-Formate
+      
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../session-02/attribute-table/">
+<a class="md-nav__link" href="#1-shapefile-laden">
+<span class="md-ellipsis">
+      
+        1. Shapefile laden
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-csv-importieren">
+<span class="md-ellipsis">
+      
+        2. CSV importieren
+      
+    </span>
+</a>
+<nav aria-label="2. CSV importieren" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#schritte">
+<span class="md-ellipsis">
+      
+        Schritte
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-exportieren-in-andere-formate">
+<span class="md-ellipsis">
+      
+        3. Exportieren in andere Formate
+      
+    </span>
+</a>
+<nav aria-label="3. Exportieren in andere Formate" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#a-nach-shapefile-exportieren">
+<span class="md-ellipsis">
+      
+        a) Nach Shapefile exportieren
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#b-nach-geopackage-exportieren">
+<span class="md-ellipsis">
+      
+        b) Nach GeoPackage exportieren
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-transformation-von-geographischen-zu-projizierten-koordinaten">
+<span class="md-ellipsis">
+      
+        4. Transformation von geographischen zu projizierten Koordinaten
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mini-ubung">
+<span class="md-ellipsis">
+      
+        Mini-Übung
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../attribute-table/">
 <span class="md-ellipsis">
     
   
@@ -279,7 +390,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../session-02/web-services-wms-wfs/">
+<a class="md-nav__link" href="../web-services-wms-wfs/">
 <span class="md-ellipsis">
     
   
@@ -291,7 +402,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../session-02/self-learning/">
+<a class="md-nav__link" href="../self-learning/">
 <span class="md-ellipsis">
     
   
@@ -303,7 +414,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../session-02/resources/">
+<a class="md-nav__link" href="../resources/">
 <span class="md-ellipsis">
     
   
@@ -456,47 +567,38 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#hauptbereiche-der-oberflache">
+<a class="md-nav__link" href="#theorie-lokale-geodaten-formate">
 <span class="md-ellipsis">
       
-        Hauptbereiche der Oberfläche
+        Theorie: Lokale Geodaten-Formate
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#neues-projekt-erstellen">
+<a class="md-nav__link" href="#1-shapefile-laden">
 <span class="md-ellipsis">
       
-        Neues Projekt erstellen
+        1. Shapefile laden
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#crs-im-projekt-einstellen">
+<a class="md-nav__link" href="#2-csv-importieren">
 <span class="md-ellipsis">
       
-        CRS im Projekt einstellen
+        2. CSV importieren
       
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#openstreetmap-hinzufugen">
-<span class="md-ellipsis">
-      
-        OpenStreetMap hinzufügen
-      
-    </span>
-</a>
-<nav aria-label="OpenStreetMap hinzufügen" class="md-nav">
+<nav aria-label="2. CSV importieren" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#xyz-tiles">
+<a class="md-nav__link" href="#schritte">
 <span class="md-ellipsis">
       
-        XYZ Tiles
+        Schritte
       
     </span>
 </a>
@@ -505,10 +607,50 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ubung">
+<a class="md-nav__link" href="#3-exportieren-in-andere-formate">
 <span class="md-ellipsis">
       
-        Übung
+        3. Exportieren in andere Formate
+      
+    </span>
+</a>
+<nav aria-label="3. Exportieren in andere Formate" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#a-nach-shapefile-exportieren">
+<span class="md-ellipsis">
+      
+        a) Nach Shapefile exportieren
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#b-nach-geopackage-exportieren">
+<span class="md-ellipsis">
+      
+        b) Nach GeoPackage exportieren
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-transformation-von-geographischen-zu-projizierten-koordinaten">
+<span class="md-ellipsis">
+      
+        4. Transformation von geographischen zu projizierten Koordinaten
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mini-ubung">
+<span class="md-ellipsis">
+      
+        Mini-Übung
       
     </span>
 </a>
@@ -520,64 +662,101 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="qgis-oberflache-erste-schritte">QGIS – Oberfläche &amp; erste Schritte</h1>
-<hr/>
-<h2 id="hauptbereiche-der-oberflache">Hauptbereiche der Oberfläche</h2>
+<h1 id="block-1-lokale-daten-laden">Block 1 – Lokale Daten laden</h1>
+<h2 id="theorie-lokale-geodaten-formate">Theorie: Lokale Geodaten-Formate</h2>
+<p>Geodaten können auf Ihrem Computer gespeichert sein. Die wichtigsten Formate:</p>
 <table>
 <thead>
 <tr>
-<th>Bereich</th>
-<th>Funktion</th>
+<th>Format</th>
+<th>Typ</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Layer-Fenster</td>
-<td>Verwaltung der Layer</td>
+<td>Shapefile (.shp)</td>
+<td>Vektor</td>
+<td>Klassisches Format (mehrere Dateien)</td>
 </tr>
 <tr>
-<td>Kartenfenster</td>
-<td>Darstellung</td>
+<td>GeoPackage (.gpkg)</td>
+<td>Vektor</td>
+<td>Modernes Containerformat (eine Datei)</td>
 </tr>
 <tr>
-<td>Browser</td>
-<td>Datenquellen</td>
+<td>CSV (.csv)</td>
+<td>Tabelle</td>
+<td>Enthält Koordinaten für Punkte</td>
 </tr>
 <tr>
-<td>Werkzeugleisten</td>
-<td>Analyse &amp; Werkzeuge</td>
+<td>GeoTIFF (.tif)</td>
+<td>Raster</td>
+<td>Bild mit Georeferenz</td>
 </tr>
 </tbody>
 </table>
-<p><img alt="Screenshot" src="images/qgis_ui.png" width="500"/></p>
-<hr/>
-<h2 id="neues-projekt-erstellen">Neues Projekt erstellen</h2>
+<p>CSV-Dateien enthalten keine Geometrie, aber Koordinaten-Spalten (z.B. <code>lat</code> und <code>lon</code>). Daraus erstellt QGIS Punkte.</p>
+<h2 id="1-shapefile-laden">1. Shapefile laden</h2>
 <ol>
-<li>QGIS starten</li>
-<li>Neues Projekt anlegen</li>
-<li>Projekt speichern</li>
+<li><strong>Layer → Datenquelle verwalten</strong> (oder <code>Strg+L</code>)</li>
+<li><strong>Quelltyp</strong>: <code>Vektor</code></li>
+<li><strong>Quelle</strong>: Klicken Sie auf <code>...</code> und wählen Sie Ihre <code>.shp</code>-Datei</li>
+<li><strong>Hinzufügen</strong></li>
 </ol>
-<hr/>
-<h2 id="crs-im-projekt-einstellen">CRS im Projekt einstellen</h2>
+<p><img alt="Shapefile laden" src="../images/b1_1_shp_import.png"/></p>
+<h2 id="2-csv-importieren">2. CSV importieren</h2>
+<p>Verwenden Sie die Übungsdatei <code>muellheimer.csv</code> mit Koordinaten.</p>
+<h3 id="schritte">Schritte</h3>
 <ol>
-<li>Rechts unten auf CRS klicken</li>
-<li>EPSG-Code auswählen (z.B. 25832)</li>
-<li>Bestätigen</li>
+<li><strong>Layer → Datenquelle verwalten</strong> → Reiter <code>Getrennte Textdatei</code></li>
+<li>CSV-Datei auswählen</li>
+<li><strong>X-Feld</strong>: <code>lon</code>, <strong>Y-Feld</strong>: <code>lat</code></li>
+<li><strong>Geometrie-Typ</strong>: <code>Punkt</code></li>
+<li><strong>CRS</strong> (Koordinatensystem): <code>EPSG:4326</code> (WGS84, weil die Koordinaten in Grad vorliegen)</li>
+<li><strong>Hinzufügen</strong></li>
 </ol>
-<hr/>
-<h2 id="openstreetmap-hinzufugen">OpenStreetMap hinzufügen</h2>
-<h3 id="xyz-tiles">XYZ Tiles</h3>
-<p>URL:
-https://tile.openstreetmap.org/{z}/{x}/{y}.png</p>
-<p>📸 <em>Screenshot XYZ Verbindung</em></p>
-<hr/>
-<h2 id="ubung">Übung</h2>
+<p><img alt="CSV-Import" src="../images/b1_2a_csv_import.png"/>
+<img alt="CSV-Import" src="../images/b1_2b_csv_import.png"/></p>
+<p>Die Punkte erscheinen nun im Kartenfenster.</p>
+<h2 id="3-exportieren-in-andere-formate">3. Exportieren in andere Formate</h2>
+<p>Nachdem die CSV als Layer geladen ist, können Sie sie in andere Vektorformate exportieren.</p>
+<h3 id="a-nach-shapefile-exportieren">a) Nach Shapefile exportieren</h3>
 <ul>
-<li>Neues Projekt anlegen</li>
-<li>CRS einstellen</li>
-<li>OSM als Hintergrund hinzufügen</li>
-<li>Projekt speichern</li>
+<li>Rechtsklick auf den Layer → <strong>Export</strong> → <strong>Objekte speichern unter</strong></li>
+<li>Format: <code>ESRI Shapefile</code></li>
+<li>Dateiname: <code>meine_punkte.shp</code></li>
+<li><strong>CRS</strong>: Wählen Sie ein projiziertes System, z.B. <code>EPSG:25832</code> (UTM Zone 32N)</li>
+<li>OK</li>
 </ul>
+<p><img alt="Export Shapefile" src="../images/b1_3a_csv_export.png"/>
+<img alt="Export Shapefile" src="../images/b1_3b_csv_export.png"/></p>
+<h3 id="b-nach-geopackage-exportieren">b) Nach GeoPackage exportieren</h3>
+<ul>
+<li>Gleicher Weg, aber Format: <code>GeoPackage</code></li>
+<li>Dateiname: <code>meine_punkte.gpkg</code></li>
+<li>Layername: z.B. <code>punkte</code></li>
+</ul>
+<h2 id="4-transformation-von-geographischen-zu-projizierten-koordinaten">4. Transformation von geographischen zu projizierten Koordinaten</h2>
+<p>Die ursprünglichen Koordinaten waren in Grad (WGS84). Für metrische Analysen in Deutschland benötigen Sie ein projiziertes System wie <strong>EPSG:25832</strong>.</p>
+<p><strong>Methode 1: Export mit Ziel-CRS</strong> (wie oben)<br/>
+Beim Export wird die Geometrie automatisch umgerechnet.</p>
+<p><strong>Methode 2: Layer neu projizieren</strong>
+- <strong>Vektor → Datenmanagement-Werkzeuge → Layer neu projizieren</strong>
+- Eingabelayer: Ihr CSV-Layer
+- Ziel-CRS: <code>EPSG:25832</code>
+- Ausgabedatei: z.B. <code>punkte_utm.shp</code></p>
+<p><img alt="Reprojektion" src="../images/b1_4a_csv_reproj.png"/>
+<img alt="Reprojektion" src="../images/b1_4b_csv_reproj.png"/></p>
+<h2 id="mini-ubung">Mini-Übung</h2>
+<ol>
+<li>Importieren Sie die <code>muellheimer.csv</code>.</li>
+<li>Exportieren Sie den Layer als GeoPackage mit CRS <code>EPSG:25832</code>.</li>
+<li>Öffnen Sie die Attributtabelle des exportierten Layers – die Koordinaten sind jetzt in Metern (sichtbar in der Spalte, falls vorhanden).</li>
+</ol>
+<blockquote>
+<p><strong>Hinweis</strong>: Die Koordinatenwerte in der Attributtabelle bleiben gleich, aber die Geometrie wurde transformiert. Um die neuen Koordinaten zu sehen, können Sie die Spalten <code>$x</code> und <code>$y</code> im Attributrechner berechnen.</p>
+</blockquote>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

@@ -5,9 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../attribute-table/" rel="prev"/>
+<link href="../self-learning/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.2" name="generator"/>
-<title>QGIS – Oberfläche &amp; erste Schritte - QGIS Grundlagenkurs – Interne Schulung</title>
+<title>Webdienste (WMS / WFS) - QGIS Grundlagenkurs – Interne Schulung</title>
 <link href="../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -21,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#qgis-oberflache-erste-schritte">
+<a class="md-skip" href="#block-3-webdienste-wms-wfs">
           Skip to content
         </a>
 </div>
@@ -45,7 +47,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              QGIS – Oberfläche &amp; erste Schritte
+              Webdienste (WMS / WFS)
             
           </span>
 </div>
@@ -219,8 +221,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
 <span class="md-ellipsis">
     
@@ -232,7 +234,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
             
@@ -243,7 +245,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../session-02/">
+<a class="md-nav__link" href="../">
 <span class="md-ellipsis">
     
   
@@ -255,7 +257,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../session-02/loading-local-data/">
+<a class="md-nav__link" href="../loading-local-data/">
 <span class="md-ellipsis">
     
   
@@ -267,7 +269,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../session-02/attribute-table/">
+<a class="md-nav__link" href="../attribute-table/">
 <span class="md-ellipsis">
     
   
@@ -278,8 +280,20 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../session-02/web-services-wms-wfs/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Webdienste (WMS / WFS)
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     
   
@@ -289,9 +303,88 @@
     
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kurzeinfuhrung-plugins-in-qgis">
+<span class="md-ellipsis">
+      
+        Kurzeinführung: Plugins in QGIS
+      
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../session-02/self-learning/">
+<a class="md-nav__link" href="#wms-web-map-service">
+<span class="md-ellipsis">
+      
+        WMS – Web Map Service
+      
+    </span>
+</a>
+<nav aria-label="WMS – Web Map Service" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beispiel-bkg-topplus-open">
+<span class="md-ellipsis">
+      
+        Beispiel: BKG TopPlus Open
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wfs-web-feature-service">
+<span class="md-ellipsis">
+      
+        WFS – Web Feature Service
+      
+    </span>
+</a>
+<nav aria-label="WFS – Web Feature Service" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beispiel-wfs-nrw-gemeindegrenzen">
+<span class="md-ellipsis">
+      
+        Beispiel: WFS NRW (Gemeindegrenzen)
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vergleich-wms-vs-wfs">
+<span class="md-ellipsis">
+      
+        Vergleich WMS vs. WFS
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mini-ubung">
+<span class="md-ellipsis">
+      
+        Mini-Übung
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../self-learning/">
 <span class="md-ellipsis">
     
   
@@ -303,7 +396,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../session-02/resources/">
+<a class="md-nav__link" href="../resources/">
 <span class="md-ellipsis">
     
   
@@ -456,47 +549,29 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#hauptbereiche-der-oberflache">
+<a class="md-nav__link" href="#kurzeinfuhrung-plugins-in-qgis">
 <span class="md-ellipsis">
       
-        Hauptbereiche der Oberfläche
+        Kurzeinführung: Plugins in QGIS
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#neues-projekt-erstellen">
+<a class="md-nav__link" href="#wms-web-map-service">
 <span class="md-ellipsis">
       
-        Neues Projekt erstellen
+        WMS – Web Map Service
       
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#crs-im-projekt-einstellen">
-<span class="md-ellipsis">
-      
-        CRS im Projekt einstellen
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#openstreetmap-hinzufugen">
-<span class="md-ellipsis">
-      
-        OpenStreetMap hinzufügen
-      
-    </span>
-</a>
-<nav aria-label="OpenStreetMap hinzufügen" class="md-nav">
+<nav aria-label="WMS – Web Map Service" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#xyz-tiles">
+<a class="md-nav__link" href="#beispiel-bkg-topplus-open">
 <span class="md-ellipsis">
       
-        XYZ Tiles
+        Beispiel: BKG TopPlus Open
       
     </span>
 </a>
@@ -505,10 +580,41 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ubung">
+<a class="md-nav__link" href="#wfs-web-feature-service">
 <span class="md-ellipsis">
       
-        Übung
+        WFS – Web Feature Service
+      
+    </span>
+</a>
+<nav aria-label="WFS – Web Feature Service" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beispiel-wfs-nrw-gemeindegrenzen">
+<span class="md-ellipsis">
+      
+        Beispiel: WFS NRW (Gemeindegrenzen)
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vergleich-wms-vs-wfs">
+<span class="md-ellipsis">
+      
+        Vergleich WMS vs. WFS
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mini-ubung">
+<span class="md-ellipsis">
+      
+        Mini-Übung
       
     </span>
 </a>
@@ -520,64 +626,75 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="qgis-oberflache-erste-schritte">QGIS – Oberfläche &amp; erste Schritte</h1>
-<hr/>
-<h2 id="hauptbereiche-der-oberflache">Hauptbereiche der Oberfläche</h2>
+<h1 id="block-3-webdienste-wms-wfs">Block 3 – Webdienste (WMS / WFS)</h1>
+<h2 id="kurzeinfuhrung-plugins-in-qgis">Kurzeinführung: Plugins in QGIS</h2>
+<p>Plugins erweitern QGIS um zusätzliche Funktionen. Sie werden über <strong>Erweiterungen → Erweiterungen verwalten</strong> installiert.</p>
+<p><strong>Besonders nützlich für deutsche Geodaten:</strong><br/>
+🔌 <code>geobasis_loader</code> – lädt automatisch WMS- und WFS-Dienste der Bundesländer (Luftbilder, topografische Karten, Verwaltungsgrenzen).</p>
+<p><img alt="Geobasis_loader Plugin" src="../images/b3_1a_plugin.png"/></p>
+<p><img alt="Geobasis_loader Plugin" src="../images/b3_1b_plugin.png"/></p>
+<h2 id="wms-web-map-service">WMS – Web Map Service</h2>
+<p>Liefert <strong>Kartenbilder</strong> (Pixel). Ideal als Hintergrundkarte, aber keine Attribute, keine Analyse.</p>
+<h3 id="beispiel-bkg-topplus-open">Beispiel: BKG TopPlus Open</h3>
+<ol>
+<li><strong>Layer → Datenquelle verwalten → WMS/WMTS</strong></li>
+<li><strong>Neu</strong> – Name: <code>BKG TopPlus</code>, URL: <code>https://sgx.geodatenzentrum.de/wms_topplus_open?</code></li>
+<li><strong>Verbinden</strong> – Layer auswählen (z.B. <code>topplus_open</code>)</li>
+<li><strong>Hinzufügen</strong></li>
+</ol>
+<p><img alt="WMS einbinden" src="../images/b3_1b_wms.png"/>
+<img alt="WMS einbinden" src="../images/b3_1c_wms.png"/></p>
+<h2 id="wfs-web-feature-service">WFS – Web Feature Service</h2>
+<p>Liefert <strong>echte Vektordaten</strong> mit Attributen. Damit können Sie arbeiten wie mit lokalen Dateien (Filtern, Selektieren, Analysieren).</p>
+<h3 id="beispiel-wfs-nrw-gemeindegrenzen">Beispiel: WFS NRW (Gemeindegrenzen)</h3>
+<ol>
+<li><strong>Layer → Datenquelle verwalten → WFS</strong></li>
+<li><strong>Neu</strong> – Name: <code>WFS NRW</code>, URL: <code>https://www.wfs.nrw.de/geobasis/wfs_nw_alkis_vereinfacht</code></li>
+<li><strong>Verbinden</strong> – Layer wählen, z.B. <code>ave:gebiet</code> (Gemeinden)</li>
+<li><strong>Hinzufügen</strong></li>
+</ol>
+<p><img alt="WFS einbinden" src="../images/b3_1b_wfs.png"/>
+<img alt="WFS einbinden" src="../images/b3_1c_wfs.png"/></p>
+<p>Öffnen Sie die Attributtabelle (Rechtsklick → Attributtabelle) – Sie sehen die Gemeindenamen, Schlüsselnummern etc.</p>
+<h2 id="vergleich-wms-vs-wfs">Vergleich WMS vs. WFS</h2>
 <table>
 <thead>
 <tr>
-<th>Bereich</th>
-<th>Funktion</th>
+<th>Merkmal</th>
+<th>WMS</th>
+<th>WFS</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Layer-Fenster</td>
-<td>Verwaltung der Layer</td>
+<td>Datentyp</td>
+<td>Bild (Raster)</td>
+<td>Vektordaten</td>
 </tr>
 <tr>
-<td>Kartenfenster</td>
-<td>Darstellung</td>
+<td>Attribute</td>
+<td>Nein</td>
+<td>Ja</td>
 </tr>
 <tr>
-<td>Browser</td>
-<td>Datenquellen</td>
+<td>Analyse möglich</td>
+<td>Nein</td>
+<td>Ja</td>
 </tr>
 <tr>
-<td>Werkzeugleisten</td>
-<td>Analyse &amp; Werkzeuge</td>
+<td>Typische Nutzung</td>
+<td>Hintergrundkarten</td>
+<td>Arbeitsdaten</td>
 </tr>
 </tbody>
 </table>
-<p><img alt="Screenshot" src="images/qgis_ui.png" width="500"/></p>
-<hr/>
-<h2 id="neues-projekt-erstellen">Neues Projekt erstellen</h2>
+<h2 id="mini-ubung">Mini-Übung</h2>
 <ol>
-<li>QGIS starten</li>
-<li>Neues Projekt anlegen</li>
-<li>Projekt speichern</li>
+<li>Installieren Sie das Plugin <code>geobasis_loader</code>.</li>
+<li>Nutzen Sie es, um einen WMS-Luftbildlayer für Ihr Bundesland zu laden.</li>
+<li>Laden Sie einen WFS-Layer mit Verwaltungsgrenzen (z.B. Gemeinden).</li>
+<li>Öffnen Sie die Attributtabelle des WFS-Layers und wählen Sie ein Objekt aus.</li>
 </ol>
-<hr/>
-<h2 id="crs-im-projekt-einstellen">CRS im Projekt einstellen</h2>
-<ol>
-<li>Rechts unten auf CRS klicken</li>
-<li>EPSG-Code auswählen (z.B. 25832)</li>
-<li>Bestätigen</li>
-</ol>
-<hr/>
-<h2 id="openstreetmap-hinzufugen">OpenStreetMap hinzufügen</h2>
-<h3 id="xyz-tiles">XYZ Tiles</h3>
-<p>URL:
-https://tile.openstreetmap.org/{z}/{x}/{y}.png</p>
-<p>📸 <em>Screenshot XYZ Verbindung</em></p>
-<hr/>
-<h2 id="ubung">Übung</h2>
-<ul>
-<li>Neues Projekt anlegen</li>
-<li>CRS einstellen</li>
-<li>OSM als Hintergrund hinzufügen</li>
-<li>Projekt speichern</li>
-</ul>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

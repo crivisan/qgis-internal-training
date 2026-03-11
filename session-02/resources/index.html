@@ -23,6 +23,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#ressourcen-links">
+          Skip to content
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -224,7 +227,7 @@
 <span class="md-ellipsis">
     
   
-    Sitzung 2 – Externe Dienste
+    Sitzung 2 – Daten laden und externe Dienste
   
 
     
@@ -236,7 +239,7 @@
 <span class="md-nav__icon md-icon"></span>
             
   
-    Sitzung 2 – Externe Dienste
+    Sitzung 2 – Daten laden und externe Dienste
   
 
           </label>
@@ -247,6 +250,42 @@
     
   
     Überblick
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../loading-local-data/">
+<span class="md-ellipsis">
+    
+  
+    Lokale Daten laden
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../attribute-table/">
+<span class="md-ellipsis">
+    
+  
+    Attributtabellen und einfache Filter
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../web-services-wms-wfs/">
+<span class="md-ellipsis">
+    
+  
+    Webdienste (WMS / WFS)
   
 
     
@@ -267,6 +306,17 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Ressourcen
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     
@@ -277,6 +327,59 @@
     
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datendownload-fur-diesen-kurs">
+<span class="md-ellipsis">
+      
+        Datendownload für diesen Kurs
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nutzliche-wms-dienste-deutschland">
+<span class="md-ellipsis">
+      
+        Nützliche WMS-Dienste (Deutschland)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nutzliche-wfs-dienste-deutschland">
+<span class="md-ellipsis">
+      
+        Nützliche WFS-Dienste (Deutschland)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#open-data-quellen">
+<span class="md-ellipsis">
+      
+        Open Data Quellen
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#plugin">
+<span class="md-ellipsis">
+      
+        Plugin
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -414,14 +517,152 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datendownload-fur-diesen-kurs">
+<span class="md-ellipsis">
+      
+        Datendownload für diesen Kurs
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nutzliche-wms-dienste-deutschland">
+<span class="md-ellipsis">
+      
+        Nützliche WMS-Dienste (Deutschland)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nutzliche-wfs-dienste-deutschland">
+<span class="md-ellipsis">
+      
+        Nützliche WFS-Dienste (Deutschland)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#open-data-quellen">
+<span class="md-ellipsis">
+      
+        Open Data Quellen
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#plugin">
+<span class="md-ellipsis">
+      
+        Plugin
+      
+    </span>
+</a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>Ressourcen</h1>
-<p>Seite im Umbau.</p>
+<h1 id="ressourcen-links">Ressourcen &amp; Links</h1>
+<h2 id="datendownload-fur-diesen-kurs">Datendownload für diesen Kurs</h2>
+<p>Alle Übungsdaten (CSV, Shapefiles, GeoPackages) finden Sie hier:</p>
+<p>🔗 <a href="https://cloud.kv-kus.de/s/Kdn3errWaPiij3c"><strong>Kursdaten herunterladen</strong></a></p>
+<hr/>
+<h2 id="nutzliche-wms-dienste-deutschland">Nützliche WMS-Dienste (Deutschland)</h2>
+<table>
+<thead>
+<tr>
+<th>Dienst</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BKG TopPlus Open</td>
+<td><code>https://sgx.geodatenzentrum.de/wms_topplus_open?</code></td>
+</tr>
+<tr>
+<td>Geobasis NRW Luftbilder</td>
+<td><code>https://www.wms.nrw.de/geobasis/wms_nw_dop?</code></td>
+</tr>
+<tr>
+<td>Geoportal RLP</td>
+<td><code>https://geoportal.rlp.de/mapbender/php/wms.php?</code></td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="nutzliche-wfs-dienste-deutschland">Nützliche WFS-Dienste (Deutschland)</h2>
+<table>
+<thead>
+<tr>
+<th>Dienst</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WFS NRW ALKIS</td>
+<td><code>https://www.wfs.nrw.de/geobasis/wfs_nw_alkis_vereinfacht</code></td>
+</tr>
+<tr>
+<td>BKG Verwaltungsgrenzen</td>
+<td><code>https://sgx.geodatenzentrum.de/wfs_vg1000?</code></td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="open-data-quellen">Open Data Quellen</h2>
+<table>
+<thead>
+<tr>
+<th>Quelle</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OpenStreetMap (Geofabrik)</td>
+<td><a href="https://download.geofabrik.de/europe/germany.html">download.geofabrik.de</a></td>
+</tr>
+<tr>
+<td>Natural Earth (global)</td>
+<td><a href="https://www.naturalearthdata.com">naturalearthdata.com</a></td>
+</tr>
+<tr>
+<td>BKG Geodatenzentrum</td>
+<td><a href="https://gdz.bkg.bund.de">gdz.bkg.bund.de</a></td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="plugin">Plugin</h2>
+<table>
+<thead>
+<tr>
+<th>Plugin</th>
+<th>Zweck</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>geobasis_loader</strong></td>
+<td>Einfacher Zugriff auf amtliche WMS/WFS</td>
+</tr>
+</tbody>
+</table>
+<p>Installation: <code>Erweiterungen → Erweiterungen verwalten → suchen → installieren</code></p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
