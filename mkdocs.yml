@@ -43,8 +43,11 @@ nav:
       - Selbsttest: session-01/self-learning.md
       - Ressourcen: session-01/resources.md
 
-  - Sitzung 2 – Externe Dienste:
+  - Sitzung 2 – Daten laden und externe Dienste:
       - Überblick: session-02/index.md
+      - Lokale Daten laden: session-02/loading-local-data.md
+      - Attributtabellen und einfache Filter: session-02/attribute-table.md
+      - Webdienste (WMS / WFS): session-02/web-services-wms-wfs.md
       - Selbsttest: session-02/self-learning.md
       - Ressourcen: session-02/resources.md
 

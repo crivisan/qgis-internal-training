@@ -9,7 +9,7 @@
 <link href="../qgis-overview/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.2" name="generator"/>
-<title>Koordinatensysteme (CRS) - QGIS Grundlagenkurs – Interne Schulung</title>
+<title>Koordinatensysteme - QGIS Grundlagenkurs – Interne Schulung</title>
 <link href="../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -23,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#koordinatenreferenzsysteme-crs">
+<a class="md-skip" href="#koordinatenreferenzsysteme">
           Skip to content
         </a>
 </div>
@@ -47,7 +47,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Koordinatensysteme (CRS)
+              Koordinatensysteme
             
           </span>
 </div>
@@ -176,7 +176,7 @@
 <span class="md-ellipsis">
     
   
-    Koordinatensysteme (CRS)
+    Koordinatensysteme
   
 
     
@@ -187,7 +187,7 @@
 <span class="md-ellipsis">
     
   
-    Koordinatensysteme (CRS)
+    Koordinatensysteme
   
 
     
@@ -200,46 +200,55 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#was-ist-ein-crs">
+<a class="md-nav__link" href="#grundlagen-vom-geoid-zum-datum">
 <span class="md-ellipsis">
       
-        Was ist ein CRS?
+        Grundlagen: Vom GeoID zum Datum
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#warum-sind-crs-wichtig">
+<a class="md-nav__link" href="#geographische-vs-projizierte-koordinatensysteme">
 <span class="md-ellipsis">
       
-        Warum sind CRS wichtig?
+        Geographische vs. Projizierte Koordinatensysteme
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#wichtige-beispiele">
+<a class="md-nav__link" href="#kartenprojektionen">
 <span class="md-ellipsis">
       
-        Wichtige Beispiele
+        Kartenprojektionen
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#typische-probleme">
+<a class="md-nav__link" href="#was-ist-ein-epsg-code">
 <span class="md-ellipsis">
       
-        Typische Probleme
+        Was ist ein EPSG-Code?
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#mini-quiz">
+<a class="md-nav__link" href="#koordinatensysteme-in-deutschland">
 <span class="md-ellipsis">
       
-        Mini-Quiz
+        Koordinatensysteme in Deutschland
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zusammenfassung">
+<span class="md-ellipsis">
+      
+        Zusammenfassung
       
     </span>
 </a>
@@ -487,46 +496,55 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#was-ist-ein-crs">
+<a class="md-nav__link" href="#grundlagen-vom-geoid-zum-datum">
 <span class="md-ellipsis">
       
-        Was ist ein CRS?
+        Grundlagen: Vom GeoID zum Datum
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#warum-sind-crs-wichtig">
+<a class="md-nav__link" href="#geographische-vs-projizierte-koordinatensysteme">
 <span class="md-ellipsis">
       
-        Warum sind CRS wichtig?
+        Geographische vs. Projizierte Koordinatensysteme
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#wichtige-beispiele">
+<a class="md-nav__link" href="#kartenprojektionen">
 <span class="md-ellipsis">
       
-        Wichtige Beispiele
+        Kartenprojektionen
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#typische-probleme">
+<a class="md-nav__link" href="#was-ist-ein-epsg-code">
 <span class="md-ellipsis">
       
-        Typische Probleme
+        Was ist ein EPSG-Code?
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#mini-quiz">
+<a class="md-nav__link" href="#koordinatensysteme-in-deutschland">
 <span class="md-ellipsis">
       
-        Mini-Quiz
+        Koordinatensysteme in Deutschland
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zusammenfassung">
+<span class="md-ellipsis">
+      
+        Zusammenfassung
       
     </span>
 </a>
@@ -538,66 +556,344 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="koordinatenreferenzsysteme-crs">Koordinatenreferenzsysteme (CRS)</h1>
+<h1 id="koordinatenreferenzsysteme">Koordinatenreferenzsysteme</h1>
 <hr/>
-<h2 id="was-ist-ein-crs">Was ist ein CRS?</h2>
-<p>Ein CRS definiert:</p>
-<ul>
-<li>Projektion</li>
-<li>Bezugssystem</li>
-<li>Einheit (Meter oder Grad)</li>
-</ul>
-<hr/>
-<h2 id="warum-sind-crs-wichtig">Warum sind CRS wichtig?</h2>
-<p>Wenn Layer unterschiedliche CRS besitzen:</p>
-<ul>
-<li>liegen sie falsch übereinander</li>
-<li>entstehen Verzerrungen</li>
-<li>Analysen werden ungenau</li>
-</ul>
-<hr/>
-<h2 id="wichtige-beispiele">Wichtige Beispiele</h2>
+<h2 id="grundlagen-vom-geoid-zum-datum">Grundlagen: Vom GeoID zum Datum</h2>
+<pre class="mermaid"><code>graph LR
+    subgraph Erde[Die wahre Erde]
+        G[GeoID] --&gt; E[Ellipsoid]
+        E --&gt; D[Datum]
+    end
+
+    G --&gt; G1["🥔 Mittlerer Meeresspiegel&lt;br&gt;Unregelmäßige Form"]
+    E --&gt; E1["📐 Mathematische Annäherung&lt;br&gt;Rotationellipsoid"]
+    D --&gt; D1["📍 Referenzpunkt&lt;br&gt;Lokale Anpassung"]
+
+    style G fill:#87CEEB,stroke:#333
+    style E fill:#90EE90,stroke:#333
+    style D fill:#FFD700,stroke:#333</code></pre>
 <table>
 <thead>
 <tr>
-<th>CRS</th>
-<th>EPSG-Code</th>
-<th>Einheit</th>
+<th>Begriff</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>WGS84</td>
-<td>4326</td>
-<td>Grad</td>
+<td><strong>GeoID</strong></td>
+<td>Äquipotentialfläche des Schwerefelds (mittlerer Meeresspiegel)</td>
+<td>Unregelmäßige "Kartoffelform"</td>
 </tr>
 <tr>
-<td>ETRS89 / UTM Zone 32N</td>
-<td>25832</td>
-<td>Meter</td>
+<td><strong>Ellipsoid</strong></td>
+<td>Mathematisch definierte Annäherung an das GeoID</td>
+<td>Rotationsellipsoid</td>
+</tr>
+<tr>
+<td><strong>Datum</strong></td>
+<td>Festlegung des Ellipsoids relativ zur Erde</td>
+<td>WGS84, ETRS89</td>
 </tr>
 </tbody>
 </table>
 <hr/>
-<p>📸 <em>Hier Diagramm Projektion einfügen</em></p>
-<hr/>
-<h2 id="typische-probleme">Typische Probleme</h2>
-<ul>
-<li>Falsche Projektion</li>
-<li>Layer verschoben</li>
-<li>Unterschiedliche Einheiten</li>
-</ul>
-<hr/>
-<h2 id="mini-quiz">Mini-Quiz</h2>
-<form>
-<input type="checkbox"/> A) CRS sind nur für GPS relevant<br/>
-<input type="checkbox"/> B) CRS definieren Projektion und Einheit<br/>
-<input type="checkbox"/> C) Unterschiedliche CRS können zu Verschiebungen führen<br/>
-</form>
-<details class="info">
-<summary>Lösung anzeigen</summary>
-<p>✅ Richtig sind B und C</p>
+<details>
+<summary>🧠 <strong>Trivia: Der höchste Berg der Erde? (Zum Aufklappen)</strong></summary>
+<br/>
+Chimborazo vs. Everest – Wer ist wirklich höher?
+
+<pre class="mermaid"><code>graph TD
+    subgraph Chimborazo[Chimborazo, Ecuador]
+        C["6.268 m&lt;br&gt;ü.M."]
+        C1["🌎 6.384 km vom Erdmittelpunkt"]
+    end
+
+    subgraph Everest[Mount Everest]
+        E["8.848 m&lt;br&gt;ü.M."]
+        E1["🌎 6.382 km vom Erdmittelpunkt"]
+    end
+
+    C --&gt; Fakt["🏆 Chimborazo ist der höchste Punkt&lt;br&gt;vom Erdmittelpunkt aus gemessen!"]
+    E --&gt; Fakt
+
+    Fakt --&gt; Grund["Warum? Die Erde ist keine Kugel:&lt;br&gt;Äquatorwölbung durch Rotation"]
+
+    style Chimborazo fill:#e1f5fe,stroke:#333
+    style Everest fill:#fff3e0,stroke:#333
+    style Fakt fill:#ffeb3b,stroke:#333,stroke-width:2px</code></pre>
+
+Überraschung: Der Chimborazo in Ecuador ist zwar niedriger über dem Meeresspiegel (6.268m vs. 8.848m), aber weil die Erde am Äquator durch die Rotation "dicker" ist, ragt sein Gipfel weiter ins Weltall – er ist der Punkt der Erde, der am weitesten vom Erdmittelpunkt entfernt liegt!
+
+
 </details>
+<p><img alt="Datenquelle" src="../images/highestpoint.jpg" width="600"/>
+<a href="https://oceanservice.noaa.gov/facts/highestpoint.html#:~:text=Earth%20is%20not%20a%20perfect,center%20than%20Mount%20Everest's%20summit.">Datenquelle</a></p>
+<hr/>
+<h2 id="geographische-vs-projizierte-koordinatensysteme">Geographische vs. Projizierte Koordinatensysteme</h2>
+<table>
+<thead>
+<tr>
+<th>Merkmal</th>
+<th>🌐 Geographisch</th>
+<th>📏 Projiziert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Einheit</strong></td>
+<td>Grad (°)</td>
+<td>Meter (m)</td>
+</tr>
+<tr>
+<td><strong>Oberfläche</strong></td>
+<td>Kugel/Ellipsoid</td>
+<td>Ebene (Karte)</td>
+</tr>
+<tr>
+<td><strong>Verzerrung</strong></td>
+<td>Winkel treu (flächenverzerrt)</td>
+<td>Fläche treu (winkelverzerrt)</td>
+</tr>
+<tr>
+<td><strong>Beispiel</strong></td>
+<td>WGS84 (Lat/Lon)</td>
+<td>UTM, Gauss-Krüger</td>
+</tr>
+<tr>
+<td><strong>Einsatz</strong></td>
+<td>GPS, globale Daten</td>
+<td>Kataster, Navigation vor Ort</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>graph LR
+    subgraph Erde[🌍 Die runde Erde]
+        direction TB
+        P1[Punkt A&lt;br&gt;50°N, 10°O]
+        P2[Punkt B&lt;br&gt;52°N, 12°O]
+    end
+
+    subgraph Karte[🗺️ Die flache Karte]
+        direction TB
+        K1[X: 350000, Y: 5540000]
+        K2[X: 420000, Y: 5760000]
+    end
+
+    Erde -- "Projektion" --&gt; Karte
+    Karte -- "Rückrechnung" --&gt; Erde
+
+    style Erde fill:#87CEEB,stroke:#333
+    style Karte fill:#f5f5f5,stroke:#333</code></pre>
+<hr/>
+<h2 id="kartenprojektionen">Kartenprojektionen</h2>
+<pre class="mermaid"><code>mindmap
+  root((Kartenprojektionen))
+    Zylinderprojektion
+      Mercator
+      UTM
+      Web Mercator
+      :::wichtig
+    Kegelprojektion
+      Lambert
+      Albers
+      :::regional
+    Azimutalprojektion
+      Gnomonisch
+      Stereografisch
+      :::polar
+    Sonstige
+      Trapez
+      Sinusoidal
+      :::thema</code></pre>
+<p>Die wichtigsten Projektionen im Überblick</p>
+<table>
+<thead>
+<tr>
+<th>Projektion</th>
+<th>Typ</th>
+<th>Eigenschaft</th>
+<th>Einsatz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mercator</strong></td>
+<td>Zylinder</td>
+<td>Winkeltreu</td>
+<td>Seefahrt (historisch)</td>
+</tr>
+<tr>
+<td><strong>Web Mercator (EPSG:3857)</strong></td>
+<td>Zylinder</td>
+<td>Winkeltreu</td>
+<td>Google Maps, OpenStreetMap</td>
+</tr>
+<tr>
+<td><strong>UTM (EPSG:32633-etc.)</strong></td>
+<td>Zylinder</td>
+<td>Winkeltreu, streifenförmig</td>
+<td>Topografische Karten weltweit</td>
+</tr>
+<tr>
+<td><strong>Gauß-Krüger (EPSG:31466-31469)</strong></td>
+<td>Zylinder</td>
+<td>Winkeltreu</td>
+<td>Historisches DE-System (3°-Streifen)</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="was-ist-ein-epsg-code">Was ist ein EPSG-Code?</h2>
+<pre class="mermaid"><code>graph TD
+    subgraph EPSG[EPSG-Code]
+        E1[European Petroleum Survey Group]
+        E2[Nummerischer Code = einmalige ID]
+        E3[Weltweiter Standard]
+    end
+
+    EPSG --&gt; Beispiele
+
+    subgraph Beispiele[Wichtige Codes]
+        WGS84["EPSG:4326&lt;br&gt;🌐 Geographisch (Lat/Lon)"]
+        WebM["EPSG:3857&lt;br&gt;🗺️ Web Mercator"]
+        GK4["EPSG:31468&lt;br&gt;📏 Gauß-Krüger Zone 4"]
+        UTM32["EPSG:32632&lt;br&gt;📏 UTM Zone 32N"]
+    end
+
+    style EPSG fill:#bbdefb,stroke:#333,stroke-width:2px
+    style Beispiele fill:#e1f5fe,stroke:#333</code></pre>
+<blockquote>
+<p><strong>EPSG-Codes</strong> sind eindeutige Nummern für Koordinatenreferenzsysteme.<br/>
+Z.B. bedeutet <strong>EPSG:4326</strong> = WGS84 (geographisch, Grad)<br/>
+<strong>EPSG:3857</strong> = Web Mercator (für Google Maps, OSM)</p>
+</blockquote>
+<hr/>
+<h2 id="koordinatensysteme-in-deutschland">Koordinatensysteme in Deutschland</h2>
+<p><strong>Früher (historisch)</strong></p>
+<pre class="mermaid"><code>timeline
+    title Historische Systeme in Deutschland
+    Vor 1945 : Verschiedene Landessysteme&lt;br&gt;Preußen, Bayern, etc.
+    1923 : Einführung Gauß-Krüger&lt;br&gt;Bessel-Ellipsoid
+    Bis 1990er : Gauß-Krüger&lt;br&gt;in 3°-Streifen
+    Nach Wende : Übergang zu UTM/ETRS89</code></pre>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>EPSG</th>
+<th>Ellipsoid</th>
+<th>Streifen</th>
+<th>Einsatz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Gauß-Krüger Zone 2</strong></td>
+<td>EPSG:31466</td>
+<td>Bessel 1841</td>
+<td>6° (historisch)</td>
+<td>Westdeutschland</td>
+</tr>
+<tr>
+<td><strong>Gauß-Krüger Zone 3</strong></td>
+<td>EPSG:31467</td>
+<td>Bessel 1841</td>
+<td>9°</td>
+<td>West-/Mitteldeutschland</td>
+</tr>
+<tr>
+<td><strong>Gauß-Krüger Zone 4</strong></td>
+<td>EPSG:31468</td>
+<td>Bessel 1841</td>
+<td>12°</td>
+<td>Ostdeutschland</td>
+</tr>
+<tr>
+<td><strong>Gauß-Krüger Zone 5</strong></td>
+<td>EPSG:31469</td>
+<td>Bessel 1841</td>
+<td>15°</td>
+<td>Sachsen</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Heute (aktuell)</strong></p>
+<pre class="mermaid"><code>graph TB
+    subgraph Aktuell[Aktuelle Systeme in Deutschland]
+        ETRS89[ETRS89&lt;br&gt;Europäisches Referenzsystem]
+
+        subgraph UTM[UTM Zone 32N &amp; 33N]
+            U32["EPSG:25832&lt;br&gt;UTM 32N (West)"]
+            U33["EPSG:25833&lt;br&gt;UTM 33N (Ost)"]
+        end
+
+        subgraph Web[Web-Standards]
+            WGS84["EPSG:4326&lt;br&gt;Für GPS"]
+            WebMerc["EPSG:3857&lt;br&gt;Für Webkarten"]
+        end
+
+        ETRS89 --&gt; UTM
+        ETRS89 --&gt; Web
+    end
+
+    style Aktuell fill:#e8f5e8,stroke:#333,stroke-width:2px
+    style UTM fill:#c8e6c9,stroke:#333
+    style Web fill:#b3e5fc,stroke:#333</code></pre>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>EPSG</th>
+<th>Beschreibung</th>
+<th>Verwendung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ETRS89 / UTM 32N</strong></td>
+<td><strong>EPSG:25832</strong></td>
+<td>Offizielles System Westdeutschland</td>
+<td>Behörden, Kataster (westl. BRD)</td>
+</tr>
+<tr>
+<td><strong>ETRS89 / UTM 33N</strong></td>
+<td><strong>EPSG:25833</strong></td>
+<td>Offizielles System Ostdeutschland</td>
+<td>Behörden, Kataster (östl. BRD)</td>
+</tr>
+<tr>
+<td><strong>WGS 84</strong></td>
+<td><strong>EPSG:4326</strong></td>
+<td>Globales geographisches System</td>
+<td>GPS, Smartphones</td>
+</tr>
+<tr>
+<td><strong>Web Mercator</strong></td>
+<td><strong>EPSG:3857</strong></td>
+<td>Für Webkarten optimiert</td>
+<td>Google Maps, OSM</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="zusammenfassung">Zusammenfassung</h2>
+<pre class="mermaid"><code>graph LR
+    A[🌍 Erde] --&gt; B[📐 Ellipsoid]
+    B --&gt; C[📍 Datum]
+    C --&gt; D[🌐 Geographisch&lt;br&gt;Grad]
+    D --&gt; E[📏 Projiziert&lt;br&gt;Meter]
+
+    D --&gt; F["EPSG:4326 (WGS84)"]
+    E --&gt; G["EPSG:25832 (UTM 32N)"]
+    E --&gt; H["EPSG:3857 (Web Mercator)"]
+
+    style A fill:#87CEEB
+    style B fill:#90EE90
+    style C fill:#FFD700
+    style D fill:#ffb74d
+    style E fill:#4fc3f7</code></pre>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

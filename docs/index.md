@@ -58,8 +58,8 @@ Dieser Kurs richtet sich an Einsteigerinnen und Einsteiger, die bisher wenig ode
 
 <h3>Sitzung 2 – Externe Dienste</h3>
 <ul>
-<li>WMS und WFS</li>
-<li>Unterschied zwischen Bild- und Vektordiensten</li>
+<li>Lokale Geodaten in QGIS laden</li>
+<li>Tabellen (CSV) als Punktlayer importieren</li>
 <li>Arbeiten mit Webdiensten</li>
 <li>Attributtabellen verstehen</li>
 </ul>

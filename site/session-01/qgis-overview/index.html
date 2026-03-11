@@ -175,7 +175,7 @@
 <span class="md-ellipsis">
     
   
-    Koordinatensysteme (CRS)
+    Koordinatensysteme
   
 
     
@@ -212,59 +212,28 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#hauptbereiche-der-oberflache">
+<a class="md-nav__link" href="#die-wichtigsten-bereiche-im-detail">
 <span class="md-ellipsis">
       
-        Hauptbereiche der Oberfläche
+        Die wichtigsten Bereiche im Detail
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#neues-projekt-erstellen">
+<a class="md-nav__link" href="#erste-schritte-projekt-anlegen">
 <span class="md-ellipsis">
       
-        Neues Projekt erstellen
+        Erste Schritte: Projekt anlegen
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#crs-im-projekt-einstellen">
+<a class="md-nav__link" href="#zusammenfassung">
 <span class="md-ellipsis">
       
-        CRS im Projekt einstellen
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#openstreetmap-hinzufugen">
-<span class="md-ellipsis">
-      
-        OpenStreetMap hinzufügen
-      
-    </span>
-</a>
-<nav aria-label="OpenStreetMap hinzufügen" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#xyz-tiles">
-<span class="md-ellipsis">
-      
-        XYZ Tiles
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ubung">
-<span class="md-ellipsis">
-      
-        Übung
+        Zusammenfassung
       
     </span>
 </a>
@@ -500,59 +469,28 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#hauptbereiche-der-oberflache">
+<a class="md-nav__link" href="#die-wichtigsten-bereiche-im-detail">
 <span class="md-ellipsis">
       
-        Hauptbereiche der Oberfläche
+        Die wichtigsten Bereiche im Detail
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#neues-projekt-erstellen">
+<a class="md-nav__link" href="#erste-schritte-projekt-anlegen">
 <span class="md-ellipsis">
       
-        Neues Projekt erstellen
+        Erste Schritte: Projekt anlegen
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#crs-im-projekt-einstellen">
+<a class="md-nav__link" href="#zusammenfassung">
 <span class="md-ellipsis">
       
-        CRS im Projekt einstellen
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#openstreetmap-hinzufugen">
-<span class="md-ellipsis">
-      
-        OpenStreetMap hinzufügen
-      
-    </span>
-</a>
-<nav aria-label="OpenStreetMap hinzufügen" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#xyz-tiles">
-<span class="md-ellipsis">
-      
-        XYZ Tiles
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ubung">
-<span class="md-ellipsis">
-      
-        Übung
+        Zusammenfassung
       
     </span>
 </a>
@@ -565,63 +503,91 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="qgis-oberflache-erste-schritte">QGIS – Oberfläche &amp; erste Schritte</h1>
+<p><pre class="mermaid"><code>graph LR
+    subgraph QGIS[QGIS Oberfläche]
+        A[Menüleiste] --&gt; B[Werkzeugleisten]
+        B --&gt; C[Kartenfenster]
+        D[Layer-Fenster] --&gt; C
+        E[Browser] --&gt; C
+        F[Statusleiste] --&gt; C
+    end
+
+    style QGIS fill:#f5f5f5,stroke:#333,stroke-width:2px
+    style A fill:#e1f5fe
+    style B fill:#fff3e0
+    style C fill:#ffffff,stroke:#333
+    style D fill:#e8f5e8
+    style E fill:#d1ffd1
+    style F fill:#e0e0e0</code></pre>
+<em>QGIS-Oberfläche: <img alt="Screenshot" src="../images/qgis_ui.png" width="600"/></em></p>
 <hr/>
-<h2 id="hauptbereiche-der-oberflache">Hauptbereiche der Oberfläche</h2>
+<h3 id="die-wichtigsten-bereiche-im-detail">Die wichtigsten Bereiche im Detail</h3>
 <table>
 <thead>
 <tr>
 <th>Bereich</th>
 <th>Funktion</th>
+<th>Tipp</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Layer-Fenster</td>
-<td>Verwaltung der Layer</td>
+<td><strong>Layer-Fenster</strong> (links)</td>
+<td>Verwaltung aller geladenen Layer</td>
+<td>Reihenfolge = Zeichenreihenfolge</td>
 </tr>
 <tr>
-<td>Kartenfenster</td>
-<td>Darstellung</td>
+<td><strong>Browser</strong> (links unten)</td>
+<td>Datenquellen durchsuchen</td>
+<td>Drag &amp; Drop möglich</td>
 </tr>
 <tr>
-<td>Browser</td>
-<td>Datenquellen</td>
+<td><strong>Kartenfenster</strong> (Mitte)</td>
+<td>Hauptarbeitsbereich</td>
+<td>Navigation mit Mausrad</td>
 </tr>
 <tr>
-<td>Werkzeugleisten</td>
-<td>Analyse &amp; Werkzeuge</td>
+<td><strong>Werkzeugleisten</strong> (oben)</td>
+<td>Schnellzugriff auf Werkzeuge</td>
+<td>Rechtsklick → ein-/ausblenden</td>
+</tr>
+<tr>
+<td><strong>Statusleiste</strong> (unten)</td>
+<td>CRS, Koordinaten, Maßstab</td>
+<td>Hier CRS schnell ändern</td>
 </tr>
 </tbody>
 </table>
-<p><img alt="Screenshot" src="../images/qgis_ui.png" width="500"/></p>
 <hr/>
-<h2 id="neues-projekt-erstellen">Neues Projekt erstellen</h2>
-<ol>
-<li>QGIS starten</li>
-<li>Neues Projekt anlegen</li>
-<li>Projekt speichern</li>
-</ol>
+<h2 id="erste-schritte-projekt-anlegen">Erste Schritte: Projekt anlegen</h2>
+<pre class="mermaid"><code>flowchart LR
+    A["QGIS starten"] --&gt; B["📁 Neues Projekt&lt;br/&gt;Strg+N"]
+    B --&gt; C["💾 Projekt speichern&lt;br/&gt;Strg+Umschalt+S"]
+    C --&gt; D["⚙️ CRS einstellen"]
+    D --&gt; E["🌍 Hintergrundkarte hinzufügen"]
+    E --&gt; F["Erste Karte ist fertig!"]
+
+    style A fill:#90EE90,stroke:#333
+    style B fill:#87CEEB,stroke:#333
+    style C fill:#FFD700,stroke:#333
+    style D fill:#FFA07A,stroke:#333
+    style E fill:#DDA0DD,stroke:#333
+    style F fill:#98FB98,stroke:#333,stroke-width:2px</code></pre>
 <hr/>
-<h2 id="crs-im-projekt-einstellen">CRS im Projekt einstellen</h2>
-<ol>
-<li>Rechts unten auf CRS klicken</li>
-<li>EPSG-Code auswählen (z.B. 25832)</li>
-<li>Bestätigen</li>
-</ol>
-<hr/>
-<h2 id="openstreetmap-hinzufugen">OpenStreetMap hinzufügen</h2>
-<h3 id="xyz-tiles">XYZ Tiles</h3>
-<p>URL:
-https://tile.openstreetmap.org/{z}/{x}/{y}.png</p>
-<p>📸 <em>Screenshot XYZ Verbindung</em></p>
-<hr/>
-<h2 id="ubung">Übung</h2>
-<ul>
-<li>Neues Projekt anlegen</li>
-<li>CRS einstellen</li>
-<li>OSM als Hintergrund hinzufügen</li>
-<li>Projekt speichern</li>
-</ul>
+<h2 id="zusammenfassung">Zusammenfassung</h2>
+<pre class="mermaid"><code>graph TD
+    A["QGIS starten"] --&gt; B["Projekt anlegen"]
+    B --&gt; C["CRS einstellen&lt;br/&gt;EPSG:25832"]
+    C --&gt; D["Hintergrundkarte&lt;br/&gt;OSM via XYZ"]
+    D --&gt; E["Layer verwalten&lt;br/&gt;im Layer-Fenster"]
+    E --&gt; F["Projekt speichern&lt;br/&gt;.qgz-Datei"]
+
+    style A fill:#e1f5fe
+    style B fill:#fff3e0
+    style C fill:#ffeb9f
+    style D fill:#d1ffd1
+    style E fill:#ffcccb
+    style F fill:#90EE90</code></pre>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
