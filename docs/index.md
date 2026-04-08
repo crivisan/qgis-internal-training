@@ -66,8 +66,8 @@ Dieser Kurs richtet sich an Einsteigerinnen und Einsteiger, die bisher wenig ode
 
 <h3>Sitzung 3 – Digitalisieren</h3>
 <ul>
-<li>Drucklayouts erstellen</li>
 <li>Georeferenzierung</li>
+<li>Drucklayouts erstellen</li>
 </ul>
 
 <h3>Sitzung 4 – Einfache Analysen & Layout</h3>
