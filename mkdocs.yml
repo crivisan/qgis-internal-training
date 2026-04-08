@@ -53,8 +53,11 @@ nav:
 
   - Sitzung 3 – Digitalisieren:
       - Überblick: session-03/index.md
+      - Georeferencing: session-03/georeferencing.md
+      - Layout: session-03/layout.md
       - Selbsttest: session-03/self-learning.md
       - Ressourcen: session-03/resources.md
+
 
   - Sitzung 4 – Einfache Analysen & Drucklayouts:
       - Überblick: session-04/index.md

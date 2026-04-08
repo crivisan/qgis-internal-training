@@ -66,16 +66,16 @@ Dieser Kurs richtet sich an Einsteigerinnen und Einsteiger, die bisher wenig ode
 
 <h3>Sitzung 3 – Digitalisieren</h3>
 <ul>
-<li>Eigene Layer erstellen</li>
-<li>Punkte, Linien und Polygone einzeichnen</li>
+<li>Drucklayouts erstellen</li>
 <li>Georeferenzierung</li>
 </ul>
 
 <h3>Sitzung 4 – Einfache Analysen & Layout</h3>
 <ul>
+<li>Eigene Layer erstellen</li>
+<li>Punkte, Linien und Polygone einzeichnen</li>
 <li>Puffer und räumliche Selektion</li>
 <li>Überlagerungen</li>
-<li>Drucklayouts erstellen</li>
 </ul>
 </div>
 

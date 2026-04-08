@@ -6,7 +6,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="../session-01/resources/" rel="prev"/>
-<link href="self-learning/" rel="next"/>
+<link href="loading-local-data/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.2" name="generator"/>
 <title>Überblick - QGIS Grundlagenkurs – Interne Schulung</title>
@@ -23,6 +23,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#sitzung-2-daten-laden-und-externe-dienste">
+          Skip to content
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -224,7 +227,7 @@
 <span class="md-ellipsis">
     
   
-    Sitzung 2 – Externe Dienste
+    Sitzung 2 – Daten laden und externe Dienste
   
 
     
@@ -236,18 +239,109 @@
 <span class="md-nav__icon md-icon"></span>
             
   
-    Sitzung 2 – Externe Dienste
+    Sitzung 2 – Daten laden und externe Dienste
   
 
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Überblick
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     
   
     Überblick
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lernziele-dieser-sitzung">
+<span class="md-ellipsis">
+      
+        Lernziele dieser Sitzung
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#aufbau-der-sitzung">
+<span class="md-ellipsis">
+      
+        Aufbau der Sitzung
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#direkt-zu-den-blocken">
+<span class="md-ellipsis">
+      
+        Direkt zu den Blöcken
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#was-sie-fur-diese-sitzung-brauchen">
+<span class="md-ellipsis">
+      
+        Was Sie für diese Sitzung brauchen
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="loading-local-data/">
+<span class="md-ellipsis">
+    
+  
+    Lokale Daten laden
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="attribute-table/">
+<span class="md-ellipsis">
+    
+  
+    Attributtabellen und einfache Filter
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="web-services-wms-wfs/">
+<span class="md-ellipsis">
+    
+  
+    Webdienste (WMS / WFS)
   
 
     
@@ -414,14 +508,105 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lernziele-dieser-sitzung">
+<span class="md-ellipsis">
+      
+        Lernziele dieser Sitzung
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#aufbau-der-sitzung">
+<span class="md-ellipsis">
+      
+        Aufbau der Sitzung
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#direkt-zu-den-blocken">
+<span class="md-ellipsis">
+      
+        Direkt zu den Blöcken
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#was-sie-fur-diese-sitzung-brauchen">
+<span class="md-ellipsis">
+      
+        Was Sie für diese Sitzung brauchen
+      
+    </span>
+</a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>Überblick</h1>
-<p>Seite im Umbau.</p>
+<h1 id="sitzung-2-daten-laden-und-externe-dienste">Sitzung 2 – Daten laden und externe Dienste</h1>
+<h2 id="lernziele-dieser-sitzung">Lernziele dieser Sitzung</h2>
+<p>Nach dieser Sitzung können Sie:</p>
+<ul>
+<li>Lokale Geodaten in QGIS laden (Shapefile, CSV, GeoPackage)</li>
+<li>CSV-Dateien als Punktlayer importieren</li>
+<li>Attributtabellen öffnen und einfache Filter anwenden</li>
+<li>WMS- und WFS-Dienste unterscheiden</li>
+<li>Webdienste in QGIS einbinden</li>
+<li>Das Plugin <code>geobasis_loader</code> kennenlernen</li>
+</ul>
+<h2 id="aufbau-der-sitzung">Aufbau der Sitzung</h2>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Thema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Lokale Daten laden (Shapefile, CSV, Export in andere Formate)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Attributtabellen und einfache Abfragen (kurze Demo)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Externe Dienste (WMS/WFS) und Plugin-Vorstellung</td>
+</tr>
+</tbody>
+</table>
+<h2 id="direkt-zu-den-blocken">Direkt zu den Blöcken</h2>
+<ul>
+<li><a href="loading-local-data/">Block 1 – Lokale Daten laden</a></li>
+<li><a href="attribute-table/">Block 2 – Attributtabellen</a></li>
+<li><a href="web-services-wms-wfs/">Block 3 – Webdienste (WMS/WFS)</a></li>
+<li><a href="resources/">Ressourcen</a><ul>
+<li><a href="https://cloud.kv-kus.de/s/Kdn3errWaPiij3c">Direkter Link zu Nextcloud</a>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="was-sie-fur-diese-sitzung-brauchen">Was Sie für diese Sitzung brauchen</h2>
+<ul>
+<li>QGIS installiert (Version 3.34 oder neuer)</li>
+<li>Übungsdaten (werden in den Blöcken bereitgestellt)</li>
+<li>Internetverbindung für Webdienste</li>
+<li>Ca. 1,5 – 2 Stunden Zeit</li>
+</ul>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

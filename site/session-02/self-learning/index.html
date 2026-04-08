@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../" rel="prev"/>
+<link href="../web-services-wms-wfs/" rel="prev"/>
 <link href="../resources/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.2" name="generator"/>
@@ -23,6 +23,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#selbstlern-teil-sitzung-2">
+          Skip to content
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -224,7 +227,7 @@
 <span class="md-ellipsis">
     
   
-    Sitzung 2 – Externe Dienste
+    Sitzung 2 – Daten laden und externe Dienste
   
 
     
@@ -236,7 +239,7 @@
 <span class="md-nav__icon md-icon"></span>
             
   
-    Sitzung 2 – Externe Dienste
+    Sitzung 2 – Daten laden und externe Dienste
   
 
           </label>
@@ -253,8 +256,55 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../loading-local-data/">
+<span class="md-ellipsis">
+    
+  
+    Lokale Daten laden
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../attribute-table/">
+<span class="md-ellipsis">
+    
+  
+    Attributtabellen und einfache Filter
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../web-services-wms-wfs/">
+<span class="md-ellipsis">
+    
+  
+    Webdienste (WMS / WFS)
+  
+
+    
+  </span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Selbsttest
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     
@@ -265,6 +315,45 @@
     
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fragen-zum-thema">
+<span class="md-ellipsis">
+      
+        Fragen zum Thema
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hausaufgabe">
+<span class="md-ellipsis">
+      
+        Hausaufgabe
+      
+    </span>
+</a>
+<nav aria-label="Hausaufgabe" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#musterlosung-fur-die-antwort">
+<span class="md-ellipsis">
+      
+        Musterlösung für die Antwort
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../resources/">
@@ -414,14 +503,100 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fragen-zum-thema">
+<span class="md-ellipsis">
+      
+        Fragen zum Thema
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hausaufgabe">
+<span class="md-ellipsis">
+      
+        Hausaufgabe
+      
+    </span>
+</a>
+<nav aria-label="Hausaufgabe" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#musterlosung-fur-die-antwort">
+<span class="md-ellipsis">
+      
+        Musterlösung für die Antwort
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>Selbsttest</h1>
-<p>Seite im Umbau.</p>
+<h1 id="selbstlern-teil-sitzung-2">Selbstlern-Teil: Sitzung 2</h1>
+<h2 id="fragen-zum-thema">Fragen zum Thema</h2>
+<details>
+<summary><strong>Frage 1: Welches Format liefert ein WMS?</strong></summary>
+
+- [ ] Vektordaten
+- [x] Kartenbilder
+- [ ] CSV-Tabellen
+
+**Richtig:** Kartenbilder (Pixel).
+</details>
+<details>
+<summary><strong>Frage 2: Was muss in einer CSV enthalten sein, damit QGIS Punkte daraus erzeugen kann?</strong></summary>
+
+- [ ] Eine Spalte "Farbe"
+- [x] Koordinaten-Spalten (z.B. lat/lon)
+- [ ] Eine ID-Spalte
+
+**Richtig:** Koordinaten-Spalten.
+</details>
+<details>
+<summary><strong>Frage 3: Kann man einen WFS-Layer filtern?</strong></summary>
+
+- [x] Ja, wie bei lokalen Vektordaten
+- [ ] Nein, WFS liefert nur Bilder
+
+**Richtig:** Ja, WFS liefert Vektordaten mit Attributen, daher sind Filter möglich.
+</details>
+<details>
+<summary><strong>Frage 4: Wozu dient das Plugin "geobasis_loader"?</strong></summary>
+
+- [ ] Zum Bearbeiten von Fotos
+- [x] Zum einfachen Laden von amtlichen Geodaten Deutschlands
+- [ ] Zum Konvertieren von PDFs
+
+**Richtig:** Es erleichtert den Zugriff auf WMS/WFS-Dienste der Bundesländer.
+</details>
+<h2 id="hausaufgabe">Hausaufgabe</h2>
+<p>Führen Sie die folgenden Schritte durch und dokumentieren Sie das Ergebnis mit einem Screenshot.</p>
+<ol>
+<li><strong>CSV importieren</strong> – Verwenden Sie die Datei <code>standorte.csv</code> aus Block 1.</li>
+<li><strong>WMS-Hintergrund hinzufügen</strong> – Nutzen Sie den BKG-Dienst <code>https://sgx.geodatenzentrum.de/wms_topplus_open?</code></li>
+<li><strong>WFS-Layer hinzufügen</strong> – Verwenden Sie z.B. den NRW-Dienst <code>https://www.wfs.nrw.de/geobasis/wfs_nw_alkis_vereinfacht</code> und wählen Sie einen Layer.</li>
+<li><strong>Attributtabelle öffnen</strong> – Für den WFS-Layer.</li>
+<li><strong>Ein Objekt auswählen</strong> – Klicken Sie in der Tabelle oder auf der Karte ein Objekt an.</li>
+<li><strong>Screenshot</strong> – Erstellen Sie einen Screenshot, der Karte, Layer und die Auswahl zeigt.</li>
+</ol>
+<h3 id="musterlosung-fur-die-antwort">Musterlösung für die Antwort</h3>
+<blockquote>
+<p>WMS liefert Kartenbilder (Pixel) ohne Attribute, geeignet als Hintergrund. WFS liefert Vektordaten mit Attributen, die man analysieren und filtern kann.</p>
+</blockquote>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
