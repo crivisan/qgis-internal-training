@@ -30,7 +30,7 @@ extra_javascript:
   - https://unpkg.com/@mermaid-js/mermaid-mindmap@10.9.1/dist/mermaid-mindmap.min.js
 
 extra_css:
-  - stylesheets/extra.css 
+  - stylesheets/extra.css
 
 nav:
   - Start: index.md
@@ -58,8 +58,8 @@ nav:
       - Selbsttest: session-03/self-learning.md
       - Ressourcen: session-03/resources.md
 
-
   - Sitzung 4 – Einfache Analysen:
       - Überblick: session-04/index.md
-      - Selbsttest: session-04/self-learning.md
+      - Analyse-Grundlagen: session-04/analyse-grundlagen.md
+      - "LSG vs. ALKIS – Praxis": session-04/lsg-alkis-vergleich.md
       - Ressourcen: session-04/resources.md

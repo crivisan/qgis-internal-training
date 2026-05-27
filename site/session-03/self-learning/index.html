@@ -380,17 +380,6 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    
-  
-    Selbsttest
-  
-
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     
@@ -401,54 +390,6 @@
     
   </span>
 </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#aufgabe">
-<span class="md-ellipsis">
-      
-        Aufgabe
-      
-    </span>
-</a>
-<nav aria-label="Aufgabe" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#teil-1-georeferencing">
-<span class="md-ellipsis">
-      
-        Teil 1: Georeferencing
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#teil-2-print-layout">
-<span class="md-ellipsis">
-      
-        Teil 2: Print Layout
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#reflexionsfragen">
-<span class="md-ellipsis">
-      
-        Reflexionsfragen
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../resources/">
@@ -536,52 +477,6 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#aufgabe">
-<span class="md-ellipsis">
-      
-        Aufgabe
-      
-    </span>
-</a>
-<nav aria-label="Aufgabe" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#teil-1-georeferencing">
-<span class="md-ellipsis">
-      
-        Teil 1: Georeferencing
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#teil-2-print-layout">
-<span class="md-ellipsis">
-      
-        Teil 2: Print Layout
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#reflexionsfragen">
-<span class="md-ellipsis">
-      
-        Reflexionsfragen
-      
-    </span>
-</a>
-</li>
-</ul>
 </nav>
 </div>
 </div>
@@ -589,45 +484,184 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="georeferencing-layout">Georeferencing &amp; Layout</h1>
+<h1 id="georeferenzierung-einer-gescannten-karte">Georeferenzierung einer gescannten Karte</h1>
+<hr/>
+<h2 id="ziel-der-aufgabe">Ziel der Aufgabe</h2>
+<p>In dieser Übung georeferenzieren Sie eine gescannte Karte <strong>ohne Hintergrundkarte (WMS)</strong>.</p>
+<p>Stattdessen verwenden Sie: <strong>Koordinatengitter + angegebene Koordinaten</strong></p>
+<hr/>
+<h2 id="vorbereitung">Vorbereitung</h2>
+<ul>
+<li>Verwenden Sie <strong>einen zweiten Monitor</strong></li>
+<li>Öffnen Sie die Bilddatei <strong>zusätzlich außerhalb von QGIS</strong></li>
+</ul>
+<hr/>
+<h2 id="wichtiger-hinweis-zur-karte">Wichtiger Hinweis zur Karte</h2>
+<p>Am <strong>unteren linken Rand</strong> der Karte finden Sie die vollständigen Koordinaten:</p>
+<p><img alt="Koordinaten unten links" src="../images/task_1_GPCS.png"/></p>
+<p>Beispiel:</p>
+<ul>
+<li><strong>9577000 m N</strong></li>
+<li><strong>639000 m E</strong></li>
+</ul>
+<p>❗❗❗ Besonderheit des Gitters❗❗❗</p>
+<p>Die restlichen Koordinaten im Raster sind <strong>gekürzt dargestellt</strong>:</p>
+<ul>
+<li>Beispiel: <code>640</code> bedeutet → <strong>640000 m E</strong></li>
+<li>Beispiel: <code>9578</code> bedeutet → <strong>9578000 m N</strong></li>
+</ul>
+<p>Sie müssen also <strong>„000“ ergänzen</strong></p>
+<p><strong>Warum?</strong><br/>
+Zur besseren Lesbarkeit und um die Karte nicht zu überladen.</p>
+<hr/>
+<h2 id="schritt-1-qgis-projekt-vorbereiten">Schritt 1 – QGIS Projekt vorbereiten</h2>
+<ol>
+<li>QGIS öffnen</li>
+<li>Neues Projekt erstellen</li>
+</ol>
+<h3 id="crs-einstellen">CRS einstellen</h3>
+<ol>
+<li>Menü <strong>Projekt → Eigenschaften</strong></li>
+<li>Reiter <strong>KBS</strong></li>
+<li>Suche: <code>24877</code></li>
+</ol>
+<p>Wählen Sie:</p>
+<p><strong>PSAD56 / UTM Zone 17S</strong></p>
+<p><img alt="CRS einstellen" src="../images/task_0_KBS.png"/></p>
+<hr/>
+<h2 id="schritt-2-georeferenzierer-offnen">Schritt 2 – Georeferenzierer öffnen</h2>
+<ol>
+<li>Menü <strong>Layer → Georeferenzierung</strong></li>
+</ol>
+<hr/>
+<h2 id="schritt-3-bild-laden">Schritt 3 – Bild laden</h2>
+<ol>
+<li><strong>Datei → Raster öffnen</strong></li>
+<li>Ihre Karte auswählen (<code>Zaruma_Transformadas_PSAD_19565000.jpg</code>)</li>
+</ol>
+<hr/>
+<h2 id="hinweis-zur-darstellung">Hinweis zur Darstellung</h2>
+<p>Das Bild wird zunächst:</p>
+<ul>
+<li>gedreht / verschoben erscheinen</li>
+</ul>
+<p>Deshalb: Bild <strong>parallel außerhalb von QGIS geöffnet lassen</strong></p>
+<hr/>
+<h2 id="schritt-4-gcp-punkte-setzen">Schritt 4 – GCP Punkte setzen</h2>
+<p>Jetzt beginnt der wichtigste Teil.</p>
+<p>Wir verwenden: <strong>Gitterkreuzungen + Koordinaten</strong></p>
+<hr/>
+<h3 id="vorgehen">Vorgehen</h3>
+<ol>
+<li>Klicken Sie auf eine Gitterkreuzung</li>
+<li>Geben Sie die Koordinaten manuell ein</li>
+</ol>
+<hr/>
+<h3 id="beispiel">Beispiel</h3>
+<p>Punkt:</p>
+<ul>
+<li>X (Easting): <code>640000</code></li>
+<li>Y (Northing): <code>9577000</code></li>
+</ul>
+<p><img alt="pinkes Quadrat Beispiel" src="../images/task_3_GPCS.png"/></p>
+<p>❗❗❗ Wichtige Hinweise ❗❗❗</p>
+<ul>
+<li>X = <strong>Easting (Ost)</strong> → kleinere Werte (~600000)</li>
+<li>Y = <strong>Northing (Nord)</strong> → größere Werte (~9.5 Mio)</li>
+</ul>
+<p>Merksatz: <strong>X = tausend / Y = million</strong></p>
+<hr/>
 <h2 id="aufgabe">Aufgabe</h2>
-<p>Erstellen Sie eine vollständige Karte mit einer georeferenzierten historischen Karte.</p>
-<h3 id="teil-1-georeferencing">Teil 1: Georeferencing</h3>
+<ul>
+<li>Setzen Sie mindestens <strong>6–8 GCP Punkte</strong></li>
+<li>Verteilen Sie die Punkte über die gesamte Karte</li>
+</ul>
+<p><img alt="Beispiel" src="../images/task_3b_GPCS.png"/></p>
+<hr/>
+<h2 id="schritt-5-transformation-einstellen">Schritt 5 – Transformation einstellen</h2>
 <ol>
-<li>Laden Sie eine gescannte alte Karte (stellen Sie selbst bereit oder nutzen Sie eine aus dem Kurs)</li>
-<li>Öffnen Sie den Georeferencer</li>
-<li>Setzen Sie mindestens <strong>6 GCPs</strong> gleichmäßig verteilt</li>
-<li>Führen Sie die Transformation durch (Helmert oder Polynomisch 1)</li>
-<li>Exportieren Sie als <code>georef_karte.tif</code></li>
+<li>Klicken Sie auf das <strong>Zahnrad-Symbol</strong></li>
 </ol>
-<h3 id="teil-2-print-layout">Teil 2: Print Layout</h3>
+<hr/>
+<h3 id="einstellungen">Einstellungen</h3>
+<ul>
+<li>Transformation: <strong>Polynomial 1</strong></li>
+<li>Ziel-KBS: <strong>PSAD56 / UTM Zone 17S (EPSG:24877)</strong></li>
+<li>Ausgabe: <code>.tif</code> Datei auswählen</li>
+</ul>
+<p>Rest kann unverändert bleiben.</p>
+<hr/>
+<h2 id="schritt-6-georeferenzierung-starten">Schritt 6 – Georeferenzierung starten</h2>
 <ol>
-<li>Erstellen Sie ein neues Drucklayout</li>
-<li>Fügen Sie die georeferenzierte Karte ein</li>
-<li>Stellen Sie einen passenden Maßstab ein</li>
-<li>Fügen Sie einen Nordpfeil ein</li>
-<li>Fügen Sie eine Maßstabsleiste ein</li>
-<li>Fügen Sie eine Legende ein</li>
-<li>Fügen Sie einen Titel ein (z.B. <code>Meine erste georeferenzierte Karte</code>)</li>
-<li>Exportieren Sie das Layout als <strong>PDF</strong></li>
+<li>Klicken Sie auf das <strong>Play-Symbol</strong></li>
 </ol>
-<h2 id="reflexionsfragen">Reflexionsfragen</h2>
-<details>
-<summary><strong>Frage 1: Warum braucht man mindestens 4 GCPs?</strong></summary>
-
-Eine Helmert-Transformation benötigt mindestens 2 Punkte für Verschiebung, Skalierung und Rotation. Mehr Punkte (4-6) verbessern die Genauigkeit und erlauben eine Fehlerkontrolle (RMS).
-
-</details>
-<details>
-<summary><strong>Frage 2: Welche Layout-Elemente gehören zu einer vollständigen Karte?</strong></summary>
-
-- Karte (Hauptelement)
-- Maßstabsleiste
-- Nordpfeil
-- Legende
-- Titel
-- ggf. Maßstabszahl, Datum, Quellenangabe
-
-</details>
+<p><img alt="Einstellungen" src="../images/task_5_output.png"/></p>
+<hr/>
+<h2 id="ergebnis">Ergebnis</h2>
+<ul>
+<li>Das Bild erscheint korrekt ausgerichtet im Projekt</li>
+<li>Die Karte ist nun georeferenziert</li>
+</ul>
+<hr/>
+<h1 id="zusatz-hintergrundkarte-hinzufugen">Zusatz – Hintergrundkarte hinzufügen</h1>
+<h2 id="google-hybrid">Google Hybrid</h2>
+<ol>
+<li>Browser → XYZ-Kacheln → Rechtsklick → Neue Verbindung</li>
+</ol>
+<p>Name:</p>
+<p>Google Hybrid</p>
+<p>URL:</p>
+<p>http://mt0.google.com/vt/lyrs=y&amp;hl=en&amp;x={x}&amp;y={y}&amp;z={z}</p>
+<p><img alt="Einstellungen" src="../images/task_6_google_Hybrid.png"/></p>
+<hr/>
+<h2 id="layer-hinzufugen">Layer hinzufügen</h2>
+<ul>
+<li>XYZ-Kacheln → <strong>Google Hybrid</strong> Rechtsklick → <strong>Zum Projekt hinzufügen</strong></li>
+<li>Unter den Georeferenz-Layer legen</li>
+</ul>
+<hr/>
+<h1 id="extra-3d-effekt-topographie">Extra – 3D-Effekt (Topographie)</h1>
+<h2 id="transparenz-einstellen">Transparenz einstellen</h2>
+<ol>
+<li>Rechtsklick auf Georeferenz-Layer</li>
+<li>Eigenschaften → Transparenz</li>
+<li>~60 %</li>
+</ol>
+<hr/>
+<h2 id="mapzen-terrain">Mapzen Terrain</h2>
+<ol>
+<li>XYZ-Kacheln → <strong>Mapzen Global Terrain</strong> Rechtsklick → <strong>Zum Projekt hinzufügen</strong></li>
+<li>Unter den Georeferenz-Layer legen</li>
+</ol>
+<hr/>
+<h2 id="schummerung-aktivieren">Schummerung aktivieren</h2>
+<ol>
+<li><strong>Mapzen Global Terrain</strong> Rechtsklick → Eigenschaften</li>
+<li>Symbolisierung</li>
+<li>Darstellungsart: <strong>Schummerung</strong></li>
+</ol>
+<p><img alt="2d-3d" src="../images/task_7_2d-3d.png"/></p>
+<hr/>
+<h2 id="aufgabe_1">Aufgabe</h2>
+<ul>
+<li>Prüfen Sie:</li>
+<li>Stimmen Flüsse überein?</li>
+<li>Stimmen Höhenlinien grob?</li>
+</ul>
+<hr/>
+<h2 id="ergebnis_1">Ergebnis</h2>
+<ul>
+<li>Höhenmodell sichtbar</li>
+<li>Flüsse &amp; Höhenlinien passen zusammen</li>
+</ul>
+<p>Sie haben jetzt eine <strong>2D-Karte mit 3D-Wirkung kombiniert</strong></p>
+<hr/>
+<h1 id="reflexion">Reflexion</h1>
+<ul>
+<li>Wie genau ist Ihre Georeferenzierung?</li>
+<li>Welche Punkte waren schwierig?</li>
+<li>Warum ist die Verteilung der GCPs wichtig?</li>
+</ul>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

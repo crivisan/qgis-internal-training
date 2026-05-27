@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" font-family="Segoe UI, Arial, sans-serif">
+  <style>
+    .title { font-size: 14px; font-weight: 600; fill: #333; }
+    .label { font-size: 12px; fill: #555; }
+    .small { font-size: 11px; fill: #555; }
+    .arrow { stroke: #888; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    .a     { fill: #3d85c6; opacity: 0.55; stroke: #1c3d5a; stroke-width: 1.5; }
+    .b     { fill: #e69138; opacity: 0.55; stroke: #b45f06; stroke-width: 1.5; }
+    .rA    { fill: #3d85c6; opacity: 0.85; stroke: #1c3d5a; stroke-width: 1.5; }
+    .rB    { fill: #e69138; opacity: 0.85; stroke: #b45f06; stroke-width: 1.5; }
+    .gone  { fill: #eeeeee; stroke: #bbb; stroke-width: 1; stroke-dasharray: 3 2; }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- Panel 1: Input A + B -->
+  <text x="160" y="30" text-anchor="middle" class="title">Layer A + Layer B</text>
+  <rect class="a" x="60" y="60" width="160" height="120"/>
+  <rect class="b" x="140" y="100" width="160" height="120"/>
+  <text x="90" y="90" class="small" fill="#1c3d5a">A</text>
+  <text x="280" y="215" class="small" fill="#b45f06">B</text>
+  <text x="160" y="250" text-anchor="middle" class="label">zwei sich überlappende Layer</text>
+
+  <!-- Arrow -->
+  <line class="arrow" x1="320" y1="140" x2="385" y2="140"/>
+  <text x="352" y="130" text-anchor="middle" class="label">Symm. Diff.</text>
+
+  <!-- Panel 2: Result -->
+  <text x="540" y="30" text-anchor="middle" class="title">Ergebnis: nur das Nicht-Überlappende</text>
+  <!-- A minus intersection: left "L" shape -->
+  <path class="rA" d="M440,60 L600,60 L600,100 L520,100 L520,180 L440,180 Z"/>
+  <!-- B minus intersection: right "L" shape -->
+  <path class="rB" d="M600,100 L680,100 L680,220 L520,220 L520,180 L600,180 Z"/>
+  <!-- The intersection block, greyed out -->
+  <rect class="gone" x="520" y="100" width="80" height="80"/>
+  <text x="560" y="145" text-anchor="middle" class="small" fill="#999">entfernt</text>
+  <text x="540" y="250" text-anchor="middle" class="label">Schnittmenge fällt weg</text>
+
+  <!-- Formula -->
+  <text x="360" y="275" text-anchor="middle" class="small">Formel: (A ∪ B) − (A ∩ B)</text>
+</svg>

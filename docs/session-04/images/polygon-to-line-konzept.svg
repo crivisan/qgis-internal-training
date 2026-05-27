@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" font-family="Segoe UI, Arial, sans-serif">
+  <style>
+    .title { font-size: 14px; font-weight: 600; fill: #333; }
+    .label { font-size: 12px; fill: #555; }
+    .arrow { stroke: #888; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    .poly  { fill: #cfe2f3; stroke: #1c3d5a; stroke-width: 2; }
+    .line  { fill: none; stroke: #1c3d5a; stroke-width: 2.5; }
+    .vtx   { fill: #cc0000; }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- Panel 1: Polygon -->
+  <text x="180" y="30" text-anchor="middle" class="title">Polygon-Layer</text>
+  <polygon class="poly" points="80,70 280,60 320,170 250,210 100,200"/>
+  <text x="180" y="235" text-anchor="middle" class="label">Fläche mit Inhalt</text>
+
+  <!-- Arrow -->
+  <line class="arrow" x1="340" y1="135" x2="400" y2="135"/>
+  <text x="370" y="125" text-anchor="middle" class="label">Polygon → Linie</text>
+
+  <!-- Panel 2: Lines -->
+  <text x="540" y="30" text-anchor="middle" class="title">Linien-Layer</text>
+  <polyline class="line" points="440,70 640,60 680,170 610,210 460,200 440,70"/>
+  <!-- Show vertices -->
+  <circle class="vtx" cx="440" cy="70" r="3.5"/>
+  <circle class="vtx" cx="640" cy="60" r="3.5"/>
+  <circle class="vtx" cx="680" cy="170" r="3.5"/>
+  <circle class="vtx" cx="610" cy="210" r="3.5"/>
+  <circle class="vtx" cx="460" cy="200" r="3.5"/>
+  <text x="540" y="235" text-anchor="middle" class="label">nur Randlinie, gleiche Stützpunkte</text>
+</svg>

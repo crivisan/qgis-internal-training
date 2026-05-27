@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 320" font-family="Segoe UI, Arial, sans-serif">
+  <style>
+    .title { font-size: 14px; font-weight: 600; fill: #333; }
+    .label { font-size: 12px; fill: #555; }
+    .small { font-size: 11px; fill: #555; }
+    .alkis { fill: none; stroke: #1c3d5a; stroke-width: 1.8; }
+    .band  { fill: #fde6a6; stroke: #bf9000; stroke-width: 0.8; opacity: 0.85; }
+    .lsgok { stroke: #38761d; stroke-width: 2.5; fill: none; }
+    .lsgbad{ stroke: #cc0000; stroke-width: 3; fill: none; stroke-dasharray: 4 3; }
+    .arrow { stroke: #888; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- Panel 1: ALKIS lines + LSG line -->
+  <text x="180" y="25" text-anchor="middle" class="title">Ausgangslage</text>
+  <!-- ALKIS-Flurstücksgrenzen (grid of lines) -->
+  <path class="alkis" d="M40,80 L320,80"/>
+  <path class="alkis" d="M40,140 L320,140"/>
+  <path class="alkis" d="M40,200 L320,200"/>
+  <path class="alkis" d="M100,60 L100,230"/>
+  <path class="alkis" d="M180,60 L180,230"/>
+  <path class="alkis" d="M260,60 L260,230"/>
+  <!-- LSG line: mostly following ALKIS, but some deviations -->
+  <path class="lsgok" d="M60,80 L100,80 L100,140 L180,140 L180,200 L260,200"/>
+  <text x="60" y="270" class="small" fill="#38761d">grün = LSG entlang ALKIS</text>
+  <text x="60" y="285" class="small" fill="#1c3d5a">schwarz = ALKIS-Grenzen</text>
+
+  <!-- Arrow -->
+  <line class="arrow" x1="340" y1="150" x2="395" y2="150"/>
+
+  <!-- Panel 2: ALKIS buffered + LSG -->
+  <text x="560" y="25" text-anchor="middle" class="title">ALKIS mit 1m-Puffer + LSG</text>
+  <!-- Band around the ALKIS grid -->
+  <g transform="translate(380,0)">
+    <!-- Buffered band horizontal/vertical (drawn as thick rects to simulate buffer band) -->
+    <rect class="band" x="40" y="75" width="280" height="10"/>
+    <rect class="band" x="40" y="135" width="280" height="10"/>
+    <rect class="band" x="40" y="195" width="280" height="10"/>
+    <rect class="band" x="95" y="60" width="10" height="170"/>
+    <rect class="band" x="175" y="60" width="10" height="170"/>
+    <rect class="band" x="255" y="60" width="10" height="170"/>
+    <!-- ALKIS lines (still visible) -->
+    <path class="alkis" d="M40,80 L320,80" opacity="0.6"/>
+    <path class="alkis" d="M40,140 L320,140" opacity="0.6"/>
+    <path class="alkis" d="M40,200 L320,200" opacity="0.6"/>
+    <path class="alkis" d="M100,60 L100,230" opacity="0.6"/>
+    <path class="alkis" d="M180,60 L180,230" opacity="0.6"/>
+    <path class="alkis" d="M260,60 L260,230" opacity="0.6"/>
+    <!-- LSG mostly inside the band, but one segment escapes -->
+    <path class="lsgok" d="M60,80 L100,80 L100,140 L150,140"/>
+    <path class="lsgbad" d="M150,140 L150,170 L180,170"/>
+    <path class="lsgok" d="M180,170 L180,200 L260,200"/>
+    <text x="40" y="270" class="small" fill="#cc0000">rot = LSG verlässt das Puffer-Band</text>
+    <text x="40" y="285" class="small" fill="#bf9000">gelb = Toleranzband (1m Puffer um ALKIS)</text>
+  </g>
+
+  <!-- Caption -->
+  <text x="380" y="312" text-anchor="middle" class="small">Die roten Stücke sind das Ergebnis der Symmetrischen Differenz — dort weicht der LSG-Verlauf von ALKIS ab.</text>
+</svg>
