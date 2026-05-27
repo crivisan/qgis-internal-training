@@ -6,10 +6,10 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="../" rel="prev"/>
-<link href="../resources/" rel="next"/>
+<link href="../lsg-alkis-vergleich/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.2" name="generator"/>
-<title>Selbsttest - QGIS Grundlagenkurs – Interne Schulung</title>
+<title>Analyse-Grundlagen - QGIS Grundlagenkurs – Interne Schulung</title>
 <link href="../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -23,6 +23,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#analyse-grundlagen">
+          Skip to content
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -44,7 +47,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Selbsttest
+              Analyse-Grundlagen
             
           </span>
 </div>
@@ -439,11 +442,96 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Analyse-Grundlagen
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     
   
-    Selbsttest
+    Analyse-Grundlagen
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#worum-geht-es">
+<span class="md-ellipsis">
+      
+        Worum geht es?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-clip-zuschneiden">
+<span class="md-ellipsis">
+      
+        1. Clip – Zuschneiden
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-buffer-puffer">
+<span class="md-ellipsis">
+      
+        2. Buffer – Puffer
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-polygon-linie">
+<span class="md-ellipsis">
+      
+        3. Polygon → Linie
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-symmetrische-differenz">
+<span class="md-ellipsis">
+      
+        4. Symmetrische Differenz
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kombination-die-starke-liegt-in-der-kette">
+<span class="md-ellipsis">
+      
+        Kombination: die Stärke liegt in der Kette
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../lsg-alkis-vergleich/">
+<span class="md-ellipsis">
+    
+  
+    LSG vs. ALKIS – Praxis
   
 
     
@@ -474,14 +562,243 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#worum-geht-es">
+<span class="md-ellipsis">
+      
+        Worum geht es?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-clip-zuschneiden">
+<span class="md-ellipsis">
+      
+        1. Clip – Zuschneiden
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-buffer-puffer">
+<span class="md-ellipsis">
+      
+        2. Buffer – Puffer
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-polygon-linie">
+<span class="md-ellipsis">
+      
+        3. Polygon → Linie
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-symmetrische-differenz">
+<span class="md-ellipsis">
+      
+        4. Symmetrische Differenz
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kombination-die-starke-liegt-in-der-kette">
+<span class="md-ellipsis">
+      
+        Kombination: die Stärke liegt in der Kette
+      
+    </span>
+</a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>Selbsttest</h1>
-<p>Seite im Umbau.</p>
+<h1 id="analyse-grundlagen">Analyse-Grundlagen</h1>
+<h2 id="worum-geht-es">Worum geht es?</h2>
+<p>Geoverarbeitung (engl. <em>Geoprocessing</em>) bedeutet: aus bestehenden Geodaten neue Geodaten berechnen. Das Ergebnis ist immer ein <strong>neuer Layer</strong> – die Eingangsdaten bleiben unverändert.</p>
+<p>In dieser Sitzung lernen Sie vier zentrale Werkzeuge kennen. Jedes davon hat genau eine Aufgabe, und richtig kombiniert lösen sie auch komplexe Fragestellungen.</p>
+<table>
+<thead>
+<tr>
+<th>Werkzeug</th>
+<th>Antwortet auf die Frage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Clip</strong> (Zuschneiden)</td>
+<td>„Welcher Teil von A liegt innerhalb von B?"</td>
+</tr>
+<tr>
+<td><strong>Buffer</strong> (Puffer)</td>
+<td>„Welche Zone liegt im Abstand <em>d</em> um meine Geometrie?"</td>
+</tr>
+<tr>
+<td><strong>Polygon → Linie</strong></td>
+<td>„Wie sehen nur die <em>Ränder</em> meiner Flächen aus?"</td>
+</tr>
+<tr>
+<td><strong>Symmetrische Differenz</strong></td>
+<td>„Wo unterscheiden sich A und B voneinander?"</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="1-clip-zuschneiden">1. Clip – Zuschneiden</h2>
+<p><strong>Was passiert?</strong> Ein Layer wird auf die Form eines anderen Layers reduziert. Alles außerhalb wird entfernt.</p>
+<p><img alt="Clip-Konzept" src="../images/clip-konzept.svg"/></p>
+<table>
+<thead>
+<tr>
+<th>Eingabe</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Input-Layer</strong></td>
+<td>der Layer, der zugeschnitten wird (z.B. ALKIS-Flurstücke)</td>
+</tr>
+<tr>
+<td><strong>Clip-Layer</strong></td>
+<td>die "Schablone", auf die zugeschnitten wird (z.B. LSG-Polygon)</td>
+</tr>
+<tr>
+<td><strong>Ergebnis</strong></td>
+<td>nur die Teile des Input-Layers, die innerhalb der Schablone liegen</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Typische Anwendung</p>
+<p>Sie haben einen großen Datensatz (z.B. ALKIS für den ganzen Landkreis) und brauchen nur den Ausschnitt für ein Projektgebiet. Clip macht aus 30.000 Flurstücken vielleicht 80 – das spart Rechenzeit und Übersicht.</p>
+</div>
+<p><strong>In QGIS finden Sie das Werkzeug unter:</strong>
+<strong>Vektor → Geoverarbeitungswerkzeuge → Zuschneiden</strong></p>
+<hr/>
+<h2 id="2-buffer-puffer">2. Buffer – Puffer</h2>
+<p><strong>Was passiert?</strong> Um jede Geometrie wird eine Zone in einem festgelegten Abstand <em>d</em> gelegt. Das Ergebnis ist immer ein <strong>Polygon</strong>.</p>
+<p><img alt="Buffer-Konzept" src="../images/buffer-konzept.svg"/></p>
+<table>
+<thead>
+<tr>
+<th>Eingabe</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Input-Layer</strong></td>
+<td>Punkte, Linien oder Polygone</td>
+</tr>
+<tr>
+<td><strong>Abstand</strong></td>
+<td>in der Einheit des Koordinatensystems (bei EPSG:25832 in Metern)</td>
+</tr>
+<tr>
+<td><strong>Auflösung</strong></td>
+<td>Anzahl Stützpunkte pro Viertelkreis (Standard 5 reicht)</td>
+</tr>
+<tr>
+<td><strong>Auflösen</strong></td>
+<td>ob sich überlappende Puffer zu einem Polygon verschmolzen werden</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Achtung: Einheit prüfen</p>
+<p>In einem geografischen Koordinatensystem (EPSG:4326) sind die Einheiten <strong>Grad</strong>, nicht Meter. Ein Puffer mit "50" wäre dann 50 Grad ≈ 5500 km. <strong>Immer vorher auf EPSG:25832 (oder ein anderes metrisches CRS) projizieren.</strong></p>
+</div>
+<p><strong>Typische Distanzen aus der Verwaltungspraxis:</strong></p>
+<ul>
+<li><strong>1 m</strong> – Toleranzband, um Digitalisierungsungenauigkeiten auszublenden</li>
+<li><strong>50 m</strong> – Anliegerbenachrichtigung bei Baumaßnahmen</li>
+<li><strong>200 m</strong> – Lärmschutzbereich</li>
+<li><strong>1000 m</strong> – Einzugsbereich z.B. für Standortanalysen</li>
+</ul>
+<p><strong>In QGIS:</strong> <strong>Vektor → Geoverarbeitungswerkzeuge → Puffer</strong></p>
+<hr/>
+<h2 id="3-polygon-linie">3. Polygon → Linie</h2>
+<p><strong>Was passiert?</strong> Aus einem Flächen-Layer wird ein Linien-Layer – nur die Ränder bleiben übrig.</p>
+<p><img alt="Polygon-zu-Linie" src="../images/polygon-to-line-konzept.svg"/></p>
+<p><strong>Warum macht man das?</strong></p>
+<ul>
+<li>Linien lassen sich anders puffern als Flächen (z.B. nur „um die Grenze herum", nicht „in die Fläche hinein")</li>
+<li>Linien-Layer brauchen für Analysen weniger Rechenleistung</li>
+<li>Sym. Differenz und andere Vergleiche zwischen "nur Rändern" sind oft sinnvoller als zwischen ganzen Flächen</li>
+</ul>
+<p><strong>In QGIS:</strong> <strong>Vektor → Geometrie-Werkzeuge → Polygone zu Linien</strong></p>
+<div class="admonition tip">
+<p class="admonition-title">Praxis-Hinweis</p>
+<p>Bei Multipolygonen (z.B. einem Schutzgebiet aus mehreren Teilflächen) entstehen automatisch mehrere Linien-Features. Die Topologie (also welche Linie zu welcher Fläche gehörte) wird über die <strong>Attribute</strong> mitgegeben.</p>
+</div>
+<hr/>
+<h2 id="4-symmetrische-differenz">4. Symmetrische Differenz</h2>
+<p><strong>Was passiert?</strong> Aus zwei Layern A und B werden <strong>nur die Teile</strong> zurückgegeben, die in <strong>genau einem</strong> der beiden Layer vorkommen – die Überlappung fällt weg.</p>
+<p><img alt="Symmetrische Differenz" src="../images/symdiff-konzept.svg"/></p>
+<p><strong>Mengentheoretische Definition:</strong> Symm. Differenz = (A ∪ B) − (A ∩ B)</p>
+<table>
+<thead>
+<tr>
+<th>Vergleich</th>
+<th>Was passiert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Schnitt (Intersect)</strong></td>
+<td>nur das Gemeinsame</td>
+</tr>
+<tr>
+<td><strong>Vereinigung (Union)</strong></td>
+<td>alles aus A und B</td>
+</tr>
+<tr>
+<td><strong>Differenz (Difference)</strong></td>
+<td>nur A, ohne das, was in B liegt</td>
+</tr>
+<tr>
+<td><strong>Symmetrische Differenz</strong></td>
+<td>nur das, was <em>unterschiedlich</em> ist</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Wann ist das nützlich?</p>
+<p>Wenn Sie zwei Versionen desselben Layers vergleichen wollen – z.B. „alte Schutzgebietsgrenze" gegen „neue Schutzgebietsgrenze" – zeigt die symm. Differenz <strong>genau die Änderungen</strong>. Alles, was gleich geblieben ist, verschwindet.</p>
+</div>
+<p><strong>In QGIS:</strong> <strong>Vektor → Geoverarbeitungswerkzeuge → Symmetrische Differenz</strong></p>
+<hr/>
+<h2 id="kombination-die-starke-liegt-in-der-kette">Kombination: die Stärke liegt in der Kette</h2>
+<p>Einzelne Werkzeuge sind selten die Lösung – die echte Stärke entsteht durch <strong>Verkettung</strong>. Ein Beispiel, das wir im nächsten Block durchgehen:</p>
+<pre class="mermaid"><code>flowchart LR
+    A[LSG-Polygon] --&gt; A1[Polygon → Linie]
+    B[ALKIS WFS] --&gt; B1[Clip auf LSG-Umkreis]
+    B1 --&gt; B2[Polygon → Linie]
+    B2 --&gt; B3[Buffer 1 m]
+    A1 --&gt; C[Symmetrische Differenz]
+    B3 --&gt; C
+    C --&gt; R[Abweichungen sichtbar]
+
+    style R fill:#e0f0d8,stroke:#38761d</code></pre>
+<p>Jeder Schritt für sich ist trivial. Zusammen beantworten sie die Frage: <strong>„An welchen Stellen weicht die LSG-Grenze von den Flurstücksgrenzen ab?"</strong></p>
+<p>Genau das schauen wir uns als nächstes praktisch an: <a href="../lsg-alkis-vergleich/">LSG vs. ALKIS – Praxis</a>.</p>
+<hr/>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

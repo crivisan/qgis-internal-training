@@ -6,7 +6,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="../session-03/resources/" rel="prev"/>
-<link href="self-learning/" rel="next"/>
+<link href="analyse-grundlagen/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.2" name="generator"/>
 <title>Überblick - QGIS Grundlagenkurs – Interne Schulung</title>
@@ -23,6 +23,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#sitzung-4-einfache-vektoranalysen">
+          Skip to content
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -427,6 +430,17 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Überblick
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     
@@ -437,13 +451,78 @@
     
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lernziele-dieser-sitzung">
+<span class="md-ellipsis">
+      
+        Lernziele dieser Sitzung
+      
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="self-learning/">
+<a class="md-nav__link" href="#aufbau-der-sitzung">
+<span class="md-ellipsis">
+      
+        Aufbau der Sitzung
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#direkt-zu-den-blocken">
+<span class="md-ellipsis">
+      
+        Direkt zu den Blöcken
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hintergrund-warum-diese-sitzung">
+<span class="md-ellipsis">
+      
+        Hintergrund: Warum diese Sitzung?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#was-sie-fur-diese-sitzung-brauchen">
+<span class="md-ellipsis">
+      
+        Was Sie für diese Sitzung brauchen
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="analyse-grundlagen/">
 <span class="md-ellipsis">
     
   
-    Selbsttest
+    Analyse-Grundlagen
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="lsg-alkis-vergleich/">
+<span class="md-ellipsis">
+    
+  
+    LSG vs. ALKIS – Praxis
   
 
     
@@ -474,14 +553,122 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lernziele-dieser-sitzung">
+<span class="md-ellipsis">
+      
+        Lernziele dieser Sitzung
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#aufbau-der-sitzung">
+<span class="md-ellipsis">
+      
+        Aufbau der Sitzung
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#direkt-zu-den-blocken">
+<span class="md-ellipsis">
+      
+        Direkt zu den Blöcken
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hintergrund-warum-diese-sitzung">
+<span class="md-ellipsis">
+      
+        Hintergrund: Warum diese Sitzung?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#was-sie-fur-diese-sitzung-brauchen">
+<span class="md-ellipsis">
+      
+        Was Sie für diese Sitzung brauchen
+      
+    </span>
+</a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>Überblick</h1>
-<p>Seite im Umbau.</p>
+<h1 id="sitzung-4-einfache-vektoranalysen">Sitzung 4 – Einfache Vektoranalysen</h1>
+<h2 id="lernziele-dieser-sitzung">Lernziele dieser Sitzung</h2>
+<p>Nach dieser Sitzung können Sie:</p>
+<ul>
+<li>Die Geoverarbeitungs-Werkzeuge <strong>Clip</strong>, <strong>Buffer</strong>, <strong>Polygon → Linie</strong> und <strong>Symmetrische Differenz</strong> anwenden</li>
+<li>Verstehen, wann welches Werkzeug eingesetzt wird</li>
+<li>Eine <strong>Analysekette</strong> aus mehreren Schritten aufbauen</li>
+<li>An einem realen Fall aus dem Landkreis Kusel zeigen, wie GIS-Analyse Verwaltungsfragen beantwortet</li>
+<li>Ergebnisse korrekt interpretieren und Fehlerquellen erkennen</li>
+</ul>
+<h2 id="aufbau-der-sitzung">Aufbau der Sitzung</h2>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Thema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Theorie – Geoverarbeitungs-Werkzeuge im Überblick</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Praxis – LSG-Grenze gegen ALKIS prüfen (realer Fall)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Übung – Eigenständige Anwendung für das LSG Holzbachtal</td>
+</tr>
+</tbody>
+</table>
+<h2 id="direkt-zu-den-blocken">Direkt zu den Blöcken</h2>
+<ul>
+<li><a href="analyse-grundlagen/">Analyse-Grundlagen (Theorie)</a></li>
+<li><a href="lsg-alkis-vergleich/">LSG vs. ALKIS – Praxis</a></li>
+<li><a href="self-learning.md">Übung – Holzbachtal</a></li>
+<li><a href="resources/">Ressourcen</a></li>
+</ul>
+<h2 id="hintergrund-warum-diese-sitzung">Hintergrund: Warum diese Sitzung?</h2>
+<p>In dieser Sitzung verlassen wir das reine <strong>Darstellen</strong> von Daten und gehen zum <strong>Auswerten</strong> über. Wir beantworten räumliche Fragen wie:</p>
+<ul>
+<li>„Welche Flurstücke liegen ganz oder teilweise im Schutzgebiet?"</li>
+<li>„Wo weicht die neu festgelegte Schutzgebietsgrenze von den Flurstücksgrenzen ab?"</li>
+<li>„Welche Gebäude befinden sich innerhalb von 200 m um eine geplante Baustelle?"</li>
+</ul>
+<p>Diese Fragen treten in der Bauabteilung <strong>regelmäßig</strong> auf. Die heute behandelten Werkzeuge sind das Handwerkszeug dafür.</p>
+<h2 id="was-sie-fur-diese-sitzung-brauchen">Was Sie für diese Sitzung brauchen</h2>
+<ul>
+<li>QGIS installiert (aktuelle LTR-Version)</li>
+<li>Plugin <strong>Geobasis Loader RLP</strong> (für ALKIS-WFS)</li>
+<li>Die Übungsdaten aus dem <a href="resources/">Ressourcen-Bereich</a></li>
+<li>Ca. 1,5 Stunden Zeit</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Hinweis</p>
+<p>Alle Werkzeuge dieser Sitzung finden Sie unter <strong>Vektor → Geoverarbeitungswerkzeuge</strong> oder über die <strong>Verarbeitungswerkzeuge</strong> (Strg+Alt+T) per Suchfeld.</p>
+</div>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" font-family="Segoe UI, Arial, sans-serif">
+  <style>
+    .title { font-size: 14px; font-weight: 600; fill: #333; }
+    .label { font-size: 12px; fill: #555; }
+    .arrow { stroke: #888; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    .line  { stroke: #1c3d5a; stroke-width: 2.5; fill: none; }
+    .band  { fill: #ffe599; stroke: #bf9000; stroke-width: 1; opacity: 0.85; }
+    .dist  { stroke: #cc0000; stroke-width: 1.5; }
+    .dlabel{ font-size: 11px; fill: #cc0000; font-weight: 600; }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#888"/>
+    </marker>
+    <marker id="darrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#cc0000"/>
+    </marker>
+  </defs>
+
+  <!-- Panel 1: Input line -->
+  <text x="120" y="30" text-anchor="middle" class="title">Linien-Layer</text>
+  <path class="line" d="M40,130 Q90,80 140,130 T200,130"/>
+  <text x="120" y="220" text-anchor="middle" class="label">z.B. Flurstücksgrenze</text>
+
+  <!-- Arrow -->
+  <line class="arrow" x1="215" y1="130" x2="280" y2="130"/>
+  <text x="247" y="120" text-anchor="middle" class="label">Puffer d</text>
+
+  <!-- Panel 2: Buffered -->
+  <text x="430" y="30" text-anchor="middle" class="title">Puffer (Buffer)</text>
+  <!-- Approximate buffered band around the same curve -->
+  <path class="band" d="M310,130 Q360,55 410,130 T470,130 L470,155 Q420,80 360,155 T310,155 Z"/>
+  <path class="line" d="M310,130 Q360,80 410,130 T470,130"/>
+  <!-- Distance indicator -->
+  <line class="dist" x1="380" y1="100" x2="380" y2="115" marker-start="url(#darrow)" marker-end="url(#darrow)"/>
+  <text x="395" y="112" class="dlabel">d</text>
+  <text x="430" y="220" text-anchor="middle" class="label">Zone im Abstand d um die Linie</text>
+
+  <!-- Panel 3: Use cases -->
+  <text x="620" y="30" text-anchor="middle" class="title">Beispiel-Distanzen</text>
+  <rect x="540" y="55" width="160" height="150" fill="#f3f3f3" stroke="#ccc"/>
+  <text x="555" y="85" class="label">• 1 m → Toleranzband</text>
+  <text x="555" y="110" class="label">• 50 m → Anlieger</text>
+  <text x="555" y="135" class="label">• 200 m → Lärmschutz</text>
+  <text x="555" y="160" class="label">• 1000 m → Einzugsgebiet</text>
+  <text x="620" y="220" text-anchor="middle" class="label">Distanz immer in CRS-Einheit</text>
+</svg>

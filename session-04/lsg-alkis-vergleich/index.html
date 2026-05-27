@@ -5,10 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../lsg-alkis-vergleich/" rel="prev"/>
+<link href="../analyse-grundlagen/" rel="prev"/>
+<link href="../resources/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.2" name="generator"/>
-<title>Ressourcen - QGIS Grundlagenkurs – Interne Schulung</title>
+<title>LSG vs. ALKIS – Praxis - QGIS Grundlagenkurs – Interne Schulung</title>
 <link href="../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -22,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#ressourcen-links">
+<a class="md-skip" href="#praxis-lsg-grenze-gegen-alkis-prufen">
           Skip to content
         </a>
 </div>
@@ -46,7 +47,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Ressourcen
+              LSG vs. ALKIS – Praxis
             
           </span>
 </div>
@@ -451,25 +452,13 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../lsg-alkis-vergleich/">
-<span class="md-ellipsis">
-    
-  
-    LSG vs. ALKIS – Praxis
-  
-
-    
-  </span>
-</a>
-</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
     
   
-    Ressourcen
+    LSG vs. ALKIS – Praxis
   
 
     
@@ -480,7 +469,7 @@
 <span class="md-ellipsis">
     
   
-    Ressourcen
+    LSG vs. ALKIS – Praxis
   
 
     
@@ -493,52 +482,149 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#datendownload-fur-diese-sitzung">
+<a class="md-nav__link" href="#der-reale-anlass">
 <span class="md-ellipsis">
       
-        Datendownload für diese Sitzung
+        Der reale Anlass
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#werkzeuge-plugins">
+<a class="md-nav__link" href="#die-idee-in-einem-bild">
 <span class="md-ellipsis">
       
-        Werkzeuge &amp; Plugins
+        Die Idee in einem Bild
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#offizielle-fachportale-rheinland-pfalz">
+<a class="md-nav__link" href="#die-analyse-kette-im-uberblick">
 <span class="md-ellipsis">
       
-        Offizielle Fachportale Rheinland-Pfalz
+        Die Analyse-Kette im Überblick
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#werkzeug-dokumentation-qgis-handbuch">
+<a class="md-nav__link" href="#schritt-fur-schritt">
 <span class="md-ellipsis">
       
-        Werkzeug-Dokumentation (QGIS-Handbuch)
+        Schritt-für-Schritt
+      
+    </span>
+</a>
+<nav aria-label="Schritt-für-Schritt" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#0-projekt-vorbereiten">
+<span class="md-ellipsis">
+      
+        0. Projekt vorbereiten
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#vertiefung-optional">
+<a class="md-nav__link" href="#1-lsg-polygon-laden">
 <span class="md-ellipsis">
       
-        Vertiefung (optional)
+        1. LSG-Polygon laden
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-alkis-per-wfs-laden-geobasis-loader">
+<span class="md-ellipsis">
+      
+        2. ALKIS per WFS laden (Geobasis Loader)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-alkis-auf-den-untersuchungsbereich-zuschneiden-clip">
+<span class="md-ellipsis">
+      
+        3. ALKIS auf den Untersuchungsbereich zuschneiden (Clip)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-alkis-polygone-zu-linien-umwandeln">
+<span class="md-ellipsis">
+      
+        4. ALKIS-Polygone zu Linien umwandeln
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-puffer-um-die-alkis-linien-legen-1-m">
+<span class="md-ellipsis">
+      
+        5. Puffer um die ALKIS-Linien legen (1 m)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-lsg-polygon-zu-linien-umwandeln">
+<span class="md-ellipsis">
+      
+        6. LSG-Polygon zu Linien umwandeln
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7-symmetrische-differenz-das-herzstuck">
+<span class="md-ellipsis">
+      
+        7. Symmetrische Differenz – das Herzstück
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8-ergebnis-interpretieren">
+<span class="md-ellipsis">
+      
+        8. Ergebnis interpretieren
       
     </span>
 </a>
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zusammenfassende-bewertung-der-methode">
+<span class="md-ellipsis">
+      
+        Zusammenfassende Bewertung der Methode
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../resources/">
+<span class="md-ellipsis">
+    
+  
+    Ressourcen
+  
+
+    
+  </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -558,46 +644,131 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#datendownload-fur-diese-sitzung">
+<a class="md-nav__link" href="#der-reale-anlass">
 <span class="md-ellipsis">
       
-        Datendownload für diese Sitzung
+        Der reale Anlass
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#werkzeuge-plugins">
+<a class="md-nav__link" href="#die-idee-in-einem-bild">
 <span class="md-ellipsis">
       
-        Werkzeuge &amp; Plugins
+        Die Idee in einem Bild
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#offizielle-fachportale-rheinland-pfalz">
+<a class="md-nav__link" href="#die-analyse-kette-im-uberblick">
 <span class="md-ellipsis">
       
-        Offizielle Fachportale Rheinland-Pfalz
+        Die Analyse-Kette im Überblick
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#werkzeug-dokumentation-qgis-handbuch">
+<a class="md-nav__link" href="#schritt-fur-schritt">
 <span class="md-ellipsis">
       
-        Werkzeug-Dokumentation (QGIS-Handbuch)
+        Schritt-für-Schritt
+      
+    </span>
+</a>
+<nav aria-label="Schritt-für-Schritt" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#0-projekt-vorbereiten">
+<span class="md-ellipsis">
+      
+        0. Projekt vorbereiten
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#vertiefung-optional">
+<a class="md-nav__link" href="#1-lsg-polygon-laden">
 <span class="md-ellipsis">
       
-        Vertiefung (optional)
+        1. LSG-Polygon laden
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-alkis-per-wfs-laden-geobasis-loader">
+<span class="md-ellipsis">
+      
+        2. ALKIS per WFS laden (Geobasis Loader)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-alkis-auf-den-untersuchungsbereich-zuschneiden-clip">
+<span class="md-ellipsis">
+      
+        3. ALKIS auf den Untersuchungsbereich zuschneiden (Clip)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-alkis-polygone-zu-linien-umwandeln">
+<span class="md-ellipsis">
+      
+        4. ALKIS-Polygone zu Linien umwandeln
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-puffer-um-die-alkis-linien-legen-1-m">
+<span class="md-ellipsis">
+      
+        5. Puffer um die ALKIS-Linien legen (1 m)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-lsg-polygon-zu-linien-umwandeln">
+<span class="md-ellipsis">
+      
+        6. LSG-Polygon zu Linien umwandeln
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7-symmetrische-differenz-das-herzstuck">
+<span class="md-ellipsis">
+      
+        7. Symmetrische Differenz – das Herzstück
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8-ergebnis-interpretieren">
+<span class="md-ellipsis">
+      
+        8. Ergebnis interpretieren
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zusammenfassende-bewertung-der-methode">
+<span class="md-ellipsis">
+      
+        Zusammenfassende Bewertung der Methode
       
     </span>
 </a>
@@ -609,91 +780,241 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="ressourcen-links">Ressourcen &amp; Links</h1>
-<h2 id="datendownload-fur-diese-sitzung">Datendownload für diese Sitzung</h2>
-<p>Alle Übungsdaten (LSG-Polygon Holzbachtal, optionale Beispieldateien) finden Sie hier:</p>
-<p>🔗 <a href="https://cloud.kv-kus.de/s/Kdn3errWaPiij3c"><strong>Kursdaten herunterladen</strong></a></p>
-<hr/>
-<h2 id="werkzeuge-plugins">Werkzeuge &amp; Plugins</h2>
-<table>
-<thead>
-<tr>
-<th>Werkzeug</th>
-<th>Zweck</th>
-<th>Link</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Geobasis Loader RLP</td>
-<td>ALKIS, ATKIS und Luftbilder per WFS in QGIS laden</td>
-<td><a href="https://plugins.qgis.org/plugins/geobasis_loader/">QGIS Plugin Repository</a></td>
-</tr>
-<tr>
-<td>QGIS Modellbauer</td>
-<td>Mehrstufige Analyseketten als Modell speichern</td>
-<td>im QGIS-Menü: <strong>Verarbeitung → Modellbauer</strong></td>
-</tr>
-</tbody>
-</table>
-<hr/>
-<h2 id="offizielle-fachportale-rheinland-pfalz">Offizielle Fachportale Rheinland-Pfalz</h2>
-<table>
-<thead>
-<tr>
-<th>Portal</th>
-<th>Inhalt</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://www.naturschutz.rlp.de/">LANIS RLP</a></td>
-<td>Landschaftsinformationssystem – Schutzgebiete</td>
-</tr>
-<tr>
-<td><a href="https://www.geoportal.rlp.de/">Geoportal RLP</a></td>
-<td>zentraler Geodatenkatalog des Landes</td>
-</tr>
-<tr>
-<td><a href="https://www.lfu.rlp.de/">LfU Rheinland-Pfalz</a></td>
-<td>Landesamt für Umwelt – fachliche Auskunft</td>
-</tr>
-</tbody>
-</table>
-<hr/>
-<h2 id="werkzeug-dokumentation-qgis-handbuch">Werkzeug-Dokumentation (QGIS-Handbuch)</h2>
-<table>
-<thead>
-<tr>
-<th>Werkzeug</th>
-<th>Direkter Link zur Doku</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Clip / Zuschneiden</td>
-<td><a href="https://docs.qgis.org/latest/de/docs/user_manual/processing_algs/qgis/vectoroverlay.html#clip">QGIS-Doku – Clip</a></td>
-</tr>
-<tr>
-<td>Puffer</td>
-<td><a href="https://docs.qgis.org/latest/de/docs/user_manual/processing_algs/qgis/vectorgeometry.html#buffer">QGIS-Doku – Buffer</a></td>
-</tr>
-<tr>
-<td>Polygone zu Linien</td>
-<td><a href="https://docs.qgis.org/latest/de/docs/user_manual/processing_algs/qgis/vectorgeometry.html#polygons-to-lines">QGIS-Doku – Polygons to Lines</a></td>
-</tr>
-<tr>
-<td>Symmetrische Differenz</td>
-<td><a href="https://docs.qgis.org/latest/de/docs/user_manual/processing_algs/qgis/vectoroverlay.html#symmetrical-difference">QGIS-Doku – Symmetrical Difference</a></td>
-</tr>
-</tbody>
-</table>
-<hr/>
-<h2 id="vertiefung-optional">Vertiefung (optional)</h2>
+<h1 id="praxis-lsg-grenze-gegen-alkis-prufen">Praxis: LSG-Grenze gegen ALKIS prüfen</h1>
+<h2 id="der-reale-anlass">Der reale Anlass</h2>
+<p>Ein Landschaftsschutzgebiet (LSG) im Landkreis Kusel wurde durch eine Änderungsverordnung neu festgesetzt. Die geänderten Grenzen wurden von einem externen Planungsbüro als Shape-Datei geliefert und sollten in das landesweite Schutzgebietssystem <strong>LANIS</strong> beim Landesamt für Umwelt Rheinland-Pfalz eingepflegt werden.</p>
+<p>Rückmeldung des LfU sinngemäß:</p>
+<div class="admonition quote">
+<p class="admonition-title">Auszug aus dem fachlichen Schriftverkehr</p>
+<p><em>„Die Daten der anderen LSGs Ihres Landkreises sind nicht wirklich brauchbar digitalisiert. Bitte verwenden Sie zukünftig </em><em>ALK-konforme</em><em> Geometrien – die LSG-Grenze muss exakt auf den Flurstücksgrenzen aufsetzen."</em></p>
+</div>
+<p><strong>Unsere Aufgabe:</strong> Prüfen, <strong>wo</strong> die gelieferte Geometrie von ALKIS abweicht – damit diese Stellen gezielt korrigiert werden können.</p>
+<h2 id="die-idee-in-einem-bild">Die Idee in einem Bild</h2>
+<p><img alt="LSG vs. ALKIS – Prinzip" src="../images/lsg-alkis-prinzip.svg"/></p>
+<p>Wir legen ein <strong>schmales Toleranzband (1 m)</strong> um die ALKIS-Flurstücksgrenzen. Solange die LSG-Linie innerhalb dieses Bandes verläuft, ist sie „nah genug an ALKIS". Verlässt sie das Band, haben wir eine <strong>Abweichung</strong> – und genau die suchen wir.</p>
+<h2 id="die-analyse-kette-im-uberblick">Die Analyse-Kette im Überblick</h2>
+<pre class="mermaid"><code>flowchart TB
+    subgraph IN[Eingangsdaten]
+        L0[LSG-Polygon vom Planungsbüro]
+        A0[ALKIS-Flurstücke per WFS]
+    end
+
+    A0 --&gt; A1[1. Clip auf LSG-Umkreis&lt;br/&gt;weniger Daten = weniger Rechenzeit]
+    A1 --&gt; A2[2. Polygone → Linien&lt;br/&gt;nur die Grenzen]
+    A2 --&gt; A3[3. Puffer 1 m&lt;br/&gt;Toleranzband]
+
+    L0 --&gt; L1[4. Polygone → Linien&lt;br/&gt;LSG-Grenzlinie]
+
+    A3 --&gt; S[5. Symmetrische Differenz&lt;br/&gt;Input: LSG-Linien&lt;br/&gt;Overlay: ALKIS-Puffer]
+    L1 --&gt; S
+
+    S --&gt; R[Ergebnis: Abweichungen]
+
+    style R fill:#fce4d6,stroke:#cc0000
+    style IN fill:#f3f3f3,stroke:#888</code></pre>
+<h2 id="schritt-fur-schritt">Schritt-für-Schritt</h2>
+<h3 id="0-projekt-vorbereiten">0. Projekt vorbereiten</h3>
+<ol>
+<li>Neues QGIS-Projekt</li>
+<li>CRS auf <strong>EPSG:25832</strong> (ETRS89 / UTM Zone 32N) einstellen – für Rheinland-Pfalz Standard</li>
+<li>OpenStreetMap als Hintergrund hinzufügen (XYZ-Tile)</li>
+</ol>
+<h3 id="1-lsg-polygon-laden">1. LSG-Polygon laden</h3>
+<p>Die vom Planungsbüro gelieferte Datei (<code>.geojson</code>, <code>.shp</code> oder <code>.gpkg</code>) per Drag &amp; Drop in QGIS ziehen oder über <strong>Layer → Layer hinzufügen → Vektor-Layer</strong>.</p>
+<p>Symbolisierung:</p>
 <ul>
-<li><strong>Modellbauer-Einführung</strong> (QGIS-Doku): <a href="https://docs.qgis.org/latest/de/docs/user_manual/processing/modeler.html">Graphical Modeler</a></li>
-<li><strong>ALKIS-Datenmodell</strong> (AdV): <a href="https://www.adv-online.de/AAA-Modell/ALKIS/">Dokumentation des Liegenschaftskatasters</a></li>
+<li>Füllung: transparent / hellgrün</li>
+<li>Rand: kräftig grün, 0.6 mm</li>
 </ul>
+<p>So sehen Sie sofort, <em>wo</em> das Gebiet überhaupt liegt.</p>
+<h3 id="2-alkis-per-wfs-laden-geobasis-loader">2. ALKIS per WFS laden (Geobasis Loader)</h3>
+<ol>
+<li>Plugin <strong>Geobasis Loader RLP</strong> installieren (Erweiterungen → Verwalten und installieren)</li>
+<li>In der Plugin-Leiste auf das Symbol klicken</li>
+<li>Auswahl: <strong>ALKIS → Flurstücke</strong></li>
+<li>Zur LSG-Fläche zoomen, dann <strong>In aktuellen Kartenausschnitt laden</strong></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">ALKIS ist groß</p>
+<p>Wenn Sie versehentlich für den ganzen Landkreis laden, wartet QGIS minutenlang. Immer vorher auf den Bereich des LSG zoomen.</p>
+</div>
+<h3 id="3-alkis-auf-den-untersuchungsbereich-zuschneiden-clip">3. ALKIS auf den Untersuchungsbereich zuschneiden (Clip)</h3>
+<p><strong>Vektor → Geoverarbeitungswerkzeuge → Zuschneiden</strong></p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eingabelayer</td>
+<td><code>alkis_flurstuecke</code></td>
+</tr>
+<tr>
+<td>Überlagerungslayer</td>
+<td><code>lsg_polygon</code></td>
+</tr>
+<tr>
+<td>Geclippt</td>
+<td><code>alkis_clip</code> (neue Datei)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ergebnis:</strong> Nur die ALKIS-Flurstücke, die das LSG schneiden, bleiben übrig – meist sind das nur einige hundert statt zehntausende.</p>
+<h3 id="4-alkis-polygone-zu-linien-umwandeln">4. ALKIS-Polygone zu Linien umwandeln</h3>
+<p><strong>Vektor → Geometrie-Werkzeuge → Polygone zu Linien</strong></p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eingabelayer</td>
+<td><code>alkis_clip</code></td>
+</tr>
+<tr>
+<td>Linien</td>
+<td><code>alkis_lines</code></td>
+</tr>
+</tbody>
+</table>
+<p>Jetzt haben wir die Flurstücksgrenzen als Linien-Layer.</p>
+<h3 id="5-puffer-um-die-alkis-linien-legen-1-m">5. Puffer um die ALKIS-Linien legen (1 m)</h3>
+<p><strong>Vektor → Geoverarbeitungswerkzeuge → Puffer</strong></p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eingabelayer</td>
+<td><code>alkis_lines</code></td>
+</tr>
+<tr>
+<td>Abstand</td>
+<td><code>1</code> (Einheit Meter – wegen EPSG:25832)</td>
+</tr>
+<tr>
+<td>Segmente</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Endkappenstil</td>
+<td>Rund</td>
+</tr>
+<tr>
+<td>Verbindungsstil</td>
+<td>Rund</td>
+</tr>
+<tr>
+<td>Ergebnis auflösen</td>
+<td>ja</td>
+</tr>
+<tr>
+<td>Gepuffert</td>
+<td><code>alkis_buffer</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Visuell:</strong> Sie sehen jetzt ein "Skelett" – ein 2 m breites Band entlang jeder Flurstücksgrenze.</p>
+<div class="admonition tip">
+<p class="admonition-title">Warum 1 m und nicht 0?</p>
+<p>Beim Übertragen historischer Karten, Vermessungen oder Plänen entstehen immer kleine Ungenauigkeiten. 1 m ist die Toleranz, die das LfU in der Praxis akzeptiert. Würden Sie 0 m wählen, würde <strong>jede</strong> Mini-Abweichung als Fehler markiert – inklusive irrelevanter Rundungsfehler.</p>
+</div>
+<h3 id="6-lsg-polygon-zu-linien-umwandeln">6. LSG-Polygon zu Linien umwandeln</h3>
+<p>Gleiches Werkzeug wie Schritt 4, aber für den LSG-Layer:</p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eingabelayer</td>
+<td><code>lsg_polygon</code></td>
+</tr>
+<tr>
+<td>Linien</td>
+<td><code>lsg_lines</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="7-symmetrische-differenz-das-herzstuck">7. Symmetrische Differenz – das Herzstück</h3>
+<p><strong>Vektor → Geoverarbeitungswerkzeuge → Symmetrische Differenz</strong></p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eingabelayer</td>
+<td><code>lsg_lines</code></td>
+</tr>
+<tr>
+<td>Überlagerungslayer</td>
+<td><code>alkis_buffer</code></td>
+</tr>
+<tr>
+<td>Symm. Differenz</td>
+<td><code>lsg_abweichungen</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Was passiert dabei?</strong></p>
+<ul>
+<li>Alle LSG-Linienstücke, die <strong>innerhalb</strong> des Puffer-Bandes liegen, gelten als "auf ALKIS aufgesetzt" → fallen weg</li>
+<li>Alle LSG-Linienstücke, die <strong>außerhalb</strong> des Bandes liegen, bleiben übrig → das sind die Abweichungen</li>
+</ul>
+<h3 id="8-ergebnis-interpretieren">8. Ergebnis interpretieren</h3>
+<ol>
+<li>Den Layer <code>lsg_abweichungen</code> rot und kräftig (1.0 mm) symbolisieren</li>
+<li>Hineinzoomen und prüfen</li>
+<li>Mit dem Kartenfenster <strong>OpenStreetMap-Hintergrund</strong> sichtbar lassen</li>
+</ol>
+<p><strong>Was Sie sehen werden:</strong></p>
+<ul>
+<li><strong>Lange rote Linien</strong> → Die LSG-Grenze verläuft über mehrere Flurstücke hinweg falsch (echter Fehler, muss korrigiert werden)</li>
+<li><strong>Kurze rote Stücke an Ecken</strong> → meistens Digitalisier-Artefakte (zu großzügiger Puffer macht das robuster)</li>
+<li><strong>Keine roten Linien</strong> → die LSG-Grenze ist ALK-konform</li>
+</ul>
+<h2 id="zusammenfassende-bewertung-der-methode">Zusammenfassende Bewertung der Methode</h2>
+<table>
+<thead>
+<tr>
+<th>Stärke</th>
+<th>Grenze</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Funktioniert für <strong>jedes</strong> Schutzgebiet, ohne den Datensatz öffnen zu müssen</td>
+<td>Findet keine <em>fehlenden</em> Flurstücke – nur falsch verlaufende Grenzen</td>
+</tr>
+<tr>
+<td>Reproduzierbar als Modell im <strong>Modellbauer</strong> speichern</td>
+<td>Bei sehr alten Karten kann 1 m Puffer zu eng sein</td>
+</tr>
+<tr>
+<td>Liefert exakte Geometrie der Fehlstellen</td>
+<td>Sym. Differenz auf gemischten Geometrietypen – immer das Ergebnis prüfen</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<p>Bereit für die selbstständige Anwendung? → <a href="self-learning.md">Übung: LSG Holzbachtal</a></p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
